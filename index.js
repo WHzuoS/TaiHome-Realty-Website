@@ -581,13 +581,13 @@ const listings = [
     { id: 13, address: '8 Eaton Park Lane, Toronto (L\'Amoreaux), Unit 3', type: 'Townhouse', price: 940_000, beds: 5, baths: 4, sqft: "1500-2000", tag: 'Sold', url: 'https://www.realmaster.cn/s/eBoKtPq4lg?lang=en', img: 'homes/8Eaton.webp' },
     { id: 14, address: '28 Hollywood Avenue Toronto (Willowdale East), Unit 809', type: 'Condo', price: 798_000, beds: 3, baths: 2, sqft: "1000-1199", tag: 'Delisted', url: 'https://www.realmaster.cn/s/oqXFtQGS4C?lang=en', img: 'homes/holywood.webp' },
     { id: 15, address: '159 Wellesley Street E, Toronto (Cabbagetown-South St. James Town), Unit 1509', type: 'Condo', price: 598_800, beds: 2, baths: 1, sqft: "500-599", tag: 'Delisted', url: 'https://www.realmaster.cn/s/mB1d3WAcIf?lang=en', img: 'homes/159Wellesley.webp' },
-    { id: 16, address: '40 Tottenham Road, Toronto (Banbury-Don Mills)', type: 'Detached', price: 1_999_000, beds: 6, baths: 6, sqft: "3500-5000", tag: 'New', url: 'https://www.realmaster.cn/s/te3NyAyLGh?lang=en', img: 'homes/placeholder.svg' },
+    { id: 16, address: '40 Tottenham Road, Toronto (Banbury-Don Mills)', type: 'Detached', price: 1_999_000, beds: 6, baths: 6, sqft: "3500-5000", tag: 'New', url: 'https://www.realmaster.cn/s/te3NyAyLGh?lang=en', img: 'homes/40TottenhamRd.webp' },
 ];
 
 const rentals = [
-    { id: 1, address: 'Garden Suite 15 Merredin Place, Toronto (Banbury-Don Mills)', type: 'Detached', price: 3_000, beds: 2, baths: 1, sqft: "< 700", tag: 'For Rent', isRental: true, url: 'https://www.realmaster.cn/s/W9MCW2izxs?lang=en', img: 'homes/placeholder.svg' },
-    { id: 2, address: '60 Shuter Street, Toronto (Church-Yonge Corridor), Unit 309', type: 'Condo', price: 2_625, beds: 2, baths: 2, sqft: "700-799", tag: 'For Rent', isRental: true, url: 'https://www.realmaster.cn/s/dck4xKw28V?lang=en', img: 'homes/placeholder.svg' },
-    { id: 3, address: '38 Foxwarren Drive, Toronto (Bayview Village)', type: 'Detached', price: 8_000, beds: 7, baths: 7, sqft: "3500-5000", tag: 'Leased', isRental: true, url: 'https://www.realmaster.cn/s/Tl2DrDtDGc?lang=en', img: 'homes/placeholder.svg' },
+    { id: 1, address: 'Garden Suite 15 Merredin Place, Toronto (Banbury-Don Mills)', type: 'Detached', price: 3_000, beds: 2, baths: 1, sqft: "< 700", tag: 'For Rent', isRental: true, url: 'https://www.realmaster.cn/s/W9MCW2izxs?lang=en', img: 'homes/15MerredinPlace.webp' },
+    { id: 2, address: '60 Shuter Street, Toronto (Church-Yonge Corridor), Unit 309', type: 'Condo', price: 2_625, beds: 2, baths: 2, sqft: "700-799", tag: 'For Rent', isRental: true, url: 'https://www.realmaster.cn/s/dck4xKw28V?lang=en', img: 'homes/60ShuterStreet.webp' },
+    { id: 3, address: '38 Foxwarren Drive, Toronto (Bayview Village)', type: 'Detached', price: 8_000, beds: 7, baths: 7, sqft: "3500-5000", tag: 'Leased', isRental: true, url: 'https://www.realmaster.cn/s/Tl2DrDtDGc?lang=en', img: 'homes/38FoxwarrenDr.webp' },
 ];
 
 function formatPrice(price, isRental) {
