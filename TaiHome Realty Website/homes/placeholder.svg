@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="180" viewBox="0 0 400 180" role="img" aria-label="Photo coming soon">
+  <rect width="400" height="180" fill="#e8e4dc"/>
+  <g fill="none" stroke="#b9b2a6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M200 56l-40 32v44h80V88z"/>
+    <path d="M168 132v-28h22v28"/>
+  </g>
+  <text x="200" y="160" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#8a8378">Photo coming soon</text>
+</svg>

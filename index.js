@@ -566,29 +566,28 @@ document.getElementById('back-btn')?.addEventListener('click', () => {
 
 // ── Listings Data ─────────────────────────────────────────────
 const listings = [
-    { id: 1, address: '3573 Colonial Drive, Mississauga (Erin Mills)', type: 'Detached', price: 1_299_000, beds: 6, baths: 7, sqft: "2500-3000", tag: 'New', url: 'https://www.realmaster.cn/s/dPkOJJbKiD?lang=en', img: 'homes/3573ColonialDrive.webp' },
-    { id: 2, address: '38 Foxwarren Drive, Toronto (Bayview Village)', type: 'Detached', price: 3_198_000, beds: 7, baths: 7, sqft: "3500-5000", tag: 'New', url: 'https://www.realmaster.cn/s/1MejwwjRsz?lang=en', img: 'homes/38FoxwarrenDrive.webp' },
+    { id: 1, address: '3573 Colonial Drive, Mississauga (Erin Mills)', type: 'Detached', price: 1_399_000, beds: 6, baths: 7, sqft: "2500-3000", tag: 'New', url: 'https://www.realmaster.cn/s/okhAUZK3vS?lang=en', img: 'homes/3573ColonialDrive.webp' },
+    { id: 2, address: '38 Foxwarren Drive, Toronto (Bayview Village)', type: 'Detached', price: 3_690_000, beds: 7, baths: 7, sqft: "3500-5000", tag: 'New', url: 'https://www.realmaster.cn/s/1MejwwjRsz?lang=en', img: 'homes/38FoxwarrenDrive.webp' },
     { id: 3, address: '6 Iron Street, Welland (Lincoln/Crowland)', type: 'Detached', price: 379_900, beds: 3, baths: 1, sqft: "700-1100", tag: 'For Sale', url: 'https://www.realmaster.cn/s/NX15qjS5EN?lang=en', img: 'homes/iron.webp' },
-    { id: 4, address: '3880 Midland Avenue, Toronto (Milliken), Unit 05', type: 'Retail', price: 500_000, sqft: "1080", tag: 'For Sale', url: 'https://www.realmaster.cn/s/gbisFIEH07?lang=en', img: 'homes/3880midlandave.webp' },
+    { id: 4, address: '3880 Midland Avenue, Toronto (Milliken), Unit 05', type: 'Retail', price: 500_000, sqft: "1080", tag: 'Sold Conditional', url: 'https://www.realmaster.cn/s/uABiSgjTDN?lang=en', img: 'homes/3880midlandave.webp' },
     { id: 5, address: '72 Bowerbank Drive, Toronto (Newtonbrook East)', type: 'Detached', price: 1_279_000, beds: 5, baths: 3, sqft: "1500-2000", tag: 'For Sale', url: 'https://www.realmaster.cn/s/ZBkeSebC0o?lang=en', img: 'homes/bowerbank.webp' },
     { id: 6, address: '43 Karen Street, Vaughan (Crestwood-Springfarm-Yorkhill)', type: 'Semi-Detached', price: 1_098_000, beds: 3, baths: 3, sqft: "1500-2000", tag: 'For Sale', url: 'https://www.realmaster.cn/s/bcgyqnEOsw?lang=en', img: 'homes/43Karen.webp' },
-    { id: 7, address: '12 Vonda Avenue, Toronto (Willowdale East)', type: 'Detached', price: 1_599_000, beds: 6, baths: 4, sqft: "2000-2500", tag: 'For Sale', url: 'https://www.realmaster.cn/s/aphH5xS5Pz?lang=en', img: 'homes/12vondaave.webp' },
+    { id: 7, address: '12 Vonda Avenue, Toronto (Willowdale East)', type: 'Detached', price: 1_490_000, beds: 6, baths: 4, sqft: "2000-2500", tag: 'For Sale', url: 'https://www.realmaster.cn/s/jPdSGCP4Yp?lang=en', img: 'homes/12vondaave.webp' },
     { id: 8, address: '462 Ellerslie Avenue, Toronto (Willowdale West)', type: 'Detached', price: 1_249_000, beds: 3, baths: 1, sqft: "700-1100", tag: 'For Sale', url: 'https://www.realmaster.cn/s/NXojbg7CAA?lang=en', img: 'homes/462ellerslieave.webp' },
-    { id: 9, address: '6 Vonda Avenue, Toronto (Willowdale East)', type: 'Detached', price: 1_498_000, beds: 5, baths: 3, sqft: "2000-2500", tag: 'Delisted', url: 'https://www.realmaster.com/s/ks3G1xgWZw?lang=en', img: 'homes/vonda.webp' },
+    { id: 9, address: '6 Vonda Avenue, Toronto (Willowdale East)', type: 'Detached', price: 1_490_000, beds: 5, baths: 3, sqft: "2000-2500", tag: 'New', url: 'https://www.realmaster.cn/s/qpRHKtSNvg?lang=en', img: 'homes/vonda.webp' },
     { id: 10, address: '639 Royal York Road, Toronto (Stonegate-Queensway)', type: 'Detached', price: 1_340_000, beds: 4, baths: 3, sqft: "1500-2000", tag: 'Sold', url: 'https://www.realmaster.com/s/sxrQ4r6Kmk?lang=en', img: 'homes/639Royal.webp' },
     { id: 11, address: '10 Centurion Court, Toronto (Bayview Woods-Steeles)', type: 'Detached', price: 1_400_000, beds: 6, baths: 4, sqft: "2000-2500", tag: 'Sold', url: 'https://www.realmaster.cn/s/nbJIAIxhOh?lang=en', img: 'homes/10Centurion.webp' },
     { id: 12, address: '400 Alex Gardner Circle, Aurora (Aurora Village), Unit 74', type: 'Townhouse', price: 630_000, beds: 2, baths: 3, sqft: "1200-1399", tag: 'Sold', url: 'https://www.realmaster.cn/s/MXu7A1nDVn?lang=en', img: 'homes/400Alex.webp' },
     { id: 13, address: '8 Eaton Park Lane, Toronto (L\'Amoreaux), Unit 3', type: 'Townhouse', price: 940_000, beds: 5, baths: 4, sqft: "1500-2000", tag: 'Sold', url: 'https://www.realmaster.cn/s/eBoKtPq4lg?lang=en', img: 'homes/8Eaton.webp' },
     { id: 14, address: '28 Hollywood Avenue Toronto (Willowdale East), Unit 809', type: 'Condo', price: 798_000, beds: 3, baths: 2, sqft: "1000-1199", tag: 'Delisted', url: 'https://www.realmaster.cn/s/oqXFtQGS4C?lang=en', img: 'homes/holywood.webp' },
     { id: 15, address: '159 Wellesley Street E, Toronto (Cabbagetown-South St. James Town), Unit 1509', type: 'Condo', price: 598_800, beds: 2, baths: 1, sqft: "500-599", tag: 'Delisted', url: 'https://www.realmaster.cn/s/mB1d3WAcIf?lang=en', img: 'homes/159Wellesley.webp' },
-    //{ id: 6, address: '19 Fernwood Blvd, Richmond Hill', type: 'Townhouse', price: 998_000, beds: 3, baths: 3, sqft: 1750, tag: 'For Sale', url: 'https://PLACEHOLDER_LISTING_6' },
+    { id: 16, address: '40 Tottenham Road, Toronto (Banbury-Don Mills)', type: 'Detached', price: 1_999_000, beds: 6, baths: 6, sqft: "3500-5000", tag: 'New', url: 'https://www.realmaster.cn/s/te3NyAyLGh?lang=en', img: 'homes/placeholder.svg' },
 ];
 
 const rentals = [
-    //{ id: 7, address: '100 Queens Quay W, Unit 2201', type: 'Condo', price: 2_750, beds: 1, baths: 1, sqft: 620, tag: 'For Rent', isRental: true, url: 'https://PLACEHOLDER_RENTAL_1' },
-    //{ id: 8, address: '50 Charles St E, Unit 810', type: 'Condo', price: 3_200, beds: 2, baths: 2, sqft: 870, tag: 'For Rent', isRental: true, url: 'https://PLACEHOLDER_RENTAL_2' },
-    //{ id: 9, address: '14 Humber Trail, Etobicoke', type: 'Semi-Detached', price: 3_500, beds: 3, baths: 2, sqft: 1350, tag: 'For Rent', isRental: true, url: 'https://PLACEHOLDER_RENTAL_3' },
-    //{ id: 10, address: '60 Sheppard Ave E, Unit 415', type: 'Condo', price: 2_450, beds: 1, baths: 1, sqft: 590, tag: 'For Rent', isRental: true, url: 'https://PLACEHOLDER_RENTAL_4' },
+    { id: 1, address: 'Garden Suite 15 Merredin Place, Toronto (Banbury-Don Mills)', type: 'Detached', price: 3_000, beds: 2, baths: 1, sqft: "< 700", tag: 'For Rent', isRental: true, url: 'https://www.realmaster.cn/s/W9MCW2izxs?lang=en', img: 'homes/placeholder.svg' },
+    { id: 2, address: '60 Shuter Street, Toronto (Church-Yonge Corridor), Unit 309', type: 'Condo', price: 2_625, beds: 2, baths: 2, sqft: "700-799", tag: 'For Rent', isRental: true, url: 'https://www.realmaster.cn/s/dck4xKw28V?lang=en', img: 'homes/placeholder.svg' },
+    { id: 3, address: '38 Foxwarren Drive, Toronto (Bayview Village)', type: 'Detached', price: 8_000, beds: 7, baths: 7, sqft: "3500-5000", tag: 'Leased', isRental: true, url: 'https://www.realmaster.cn/s/Tl2DrDtDGc?lang=en', img: 'homes/placeholder.svg' },
 ];
 
 function formatPrice(price, isRental) {
