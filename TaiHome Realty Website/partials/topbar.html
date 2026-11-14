@@ -1,8 +1,63 @@
-<div id="bar">
-    <img id="companyTrademark" src="../TaiHome Logo 20251223.jpg" alt="TaiHome Logo">
-    <h1>TaiHome Realty</h1>
-    <button id="translate-btn" class="translate-btn" title="切换到中文 / Switch to Chinese" style="background:rgb(235,208,121) !important;color:#000 !important;border:2px solid rgb(180,155,80) !important;height:42px !important;width:auto !important;padding:0 16px !important;border-radius:999px !important;font-size:14px !important;font-weight:700 !important;flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;white-space:nowrap;margin-right:8px;">中文</button>
-    <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-    </button>
-</div>
+<header class="site-header">
+    <div class="header-inner">
+        <a class="brand-lockup" href="home.html" aria-label="TaiHome Realty Home">
+            <svg class="brand-emblem" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M10 24L13.5 30.5H27.5L31 24H10Z" fill="currentColor" fill-opacity="0.16"/>
+                <path d="M12.5 23V7.5L18.5 20.5H12.5Z"/>
+                <path d="M19.5 23V9L25.5 20.5H19.5Z"/>
+                <path d="M26.5 23V11.5L31.5 20.5H26.5Z"/>
+                <path d="M6 34C9.5 32.2 12 35.8 15.5 34C19 32.2 21.5 35.8 25 34C28.5 32.2 31 35.8 34.5 34"/>
+            </svg>
+            <div class="brand-wordmark">
+                <span class="brand-name" data-i18n="brand-name">TAIHOME</span>
+                <span class="brand-sub" data-i18n="brand-sub">Realty Inc., Brokerage*</span>
+            </div>
+        </a>
+
+        <nav class="primary-nav" aria-label="Primary Navigation">
+            <a class="nav-link" data-nav="home" data-i18n="nav-home" href="home.html">Home</a>
+            <a class="nav-link" data-nav="listings" data-i18n="nav-buying" href="listings.html">Listings</a>
+            <a class="nav-link" data-nav="exclusives" data-i18n="nav-renting" href="exclusives.html">Exclusives</a>
+            <div class="dropdown">
+                <a class="nav-link dropdown-trigger" data-nav="selling" href="selling.html">
+                    Selling
+                    <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </a>
+                <ul class="dropdown-list">
+                    <li><a href="selling.html" data-nav="selling" data-i18n="nav-sell-home">Sell Your Home</a></li>
+                    <li><a href="evaluation.html" data-nav="evaluation" data-i18n="nav-eval">Free Home Evaluation</a></li>
+                </ul>
+            </div>
+            <a class="nav-link" data-nav="team" data-i18n="nav-employees" href="team.html">Our Team</a>
+            <a class="nav-link" data-nav="join" data-i18n="nav-joinFirm" href="join.html">Join Us</a>
+            <a class="nav-link" data-nav="contact" data-i18n="nav-contact" href="contact.html">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+            <button id="translate-btn" class="translate-btn" title="切换到中文 / Switch Language">中文</button>
+            <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            </button>
+            <a class="btn btn-primary header-cta" href="evaluation.html" data-i18n="header-cta">Free Evaluation</a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="mobile-drawer" id="mobile-drawer">
+        <div class="mobile-nav-links">
+            <a class="mobile-nav-item" data-nav="home" data-i18n="nav-home" href="home.html">Home</a>
+            <a class="mobile-nav-item" data-nav="listings" data-i18n="nav-buying" href="listings.html">Listings</a>
+            <a class="mobile-nav-item" data-nav="exclusives" data-i18n="nav-renting" href="exclusives.html">Exclusives</a>
+            <a class="mobile-nav-item" data-nav="selling" data-i18n="nav-sell-home" href="selling.html">Sell Your Home</a>
+            <a class="mobile-nav-item mobile-sub-link" data-nav="evaluation" data-i18n="nav-eval" href="evaluation.html">Free Home Evaluation</a>
+            <a class="mobile-nav-item" data-nav="team" data-i18n="nav-employees" href="team.html">Our Team</a>
+            <a class="mobile-nav-item" data-nav="join" data-i18n="nav-joinFirm" href="join.html">Join Us</a>
+            <a class="mobile-nav-item" data-nav="contact" data-i18n="nav-contact" href="contact.html">Contact</a>
+        </div>
+        <div class="mobile-drawer-cta">
+            <a class="btn btn-primary" href="evaluation.html" data-i18n="header-cta">Free Evaluation</a>
+        </div>
+    </div>
+</header>

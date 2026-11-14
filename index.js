@@ -1,72 +1,102 @@
-// ── Translation System (EN ↔ ZH Simplified) ──────────────────
+// ═══════════════════════════════════════════════════════════════════════════
+// TaiHome Realty Inc. (太後地產) — Application Logic & Bilingual UI System
+// Supports both root SPA (index.html) and split pages (pages/*.html)
+// ═══════════════════════════════════════════════════════════════════════════
 
 const translations = {
     en: {
-        // Top bar
-        'bar-title': 'TaiHome Realty',
+        // Brand & Header
+        'brand-name': 'TAIHOME',
+        'brand-sub': 'Realty Inc., Brokerage*',
+        'header-cta': 'Free Evaluation',
+        'translate-btn': '中文',
 
-        // Nav tabs
+        // Navigation
         'nav-home': 'Home',
         'nav-employees': 'Our Team',
         'nav-selling': 'Selling',
-        'nav-buying': 'Office Listings',
+        'nav-buying': 'Listings',
         'nav-renting': 'Exclusives',
-        'nav-joinFirm': 'Join Our Firm',
-        'nav-contact': 'Contact Us',
+        'nav-joinFirm': 'Join Us',
+        'nav-contact': 'Contact',
         'nav-sell-home': 'Sell Your Home',
-        'nav-eval': 'Home Evaluation',
+        'nav-eval': 'Free Home Evaluation',
 
-        // Home page
-        'hero-eyebrow': "Toronto's Trusted Realty",
+        // Home — Hero
+        'hero-eyebrow': 'Greater Toronto Area Brokerage',
         'hero-title-main': 'Find Your Perfect ',
         'hero-title-em': 'Home',
-        'hero-subtitle': 'TaiHome Realty Inc. connects buyers, sellers, and renters with experienced agents who put your goals first.',
-        'hero-btn-browse': 'Browse Homes',
-        'hero-btn-agent': 'Talk to an Agent',
-        'stat-sold': 'Homes Sold',
-        'stat-exp': 'Years of Experience',
-        'stat-sat': 'Client Satisfaction',
-        'section-what': 'What We Do',
-        'svc-buying-title': 'Buying',
-        'svc-buying-desc': 'Explore our curated listings and let our agents guide you to the home you deserve.',
-        'svc-selling-title': 'Selling',
-        'svc-selling-desc': 'Market your property with precision pricing, professional photography, and expert negotiation.',
-        'svc-renting-title': 'Renting',
-        'svc-renting-desc': 'Discover quality rental homes and investment properties across the GTA.',
-        'svc-join-title': 'Join the Team',
-        'svc-join-desc': 'Ambitious agents are welcome. Grow your career at TaiHome Realty.',
+        'hero-title-end': ' in Toronto',
+        'hero-subtitle': 'TaiHome Realty Inc. connects buyers, sellers, and investors across the GTA with experienced multilingual agents who put your goals first.',
+        'hero-search-ph': 'Neighbourhood or address (e.g. Bayview Village, Willowdale)…',
+        'hero-search-type': 'All Property Types',
+        'hero-search-price': 'Any Max Price',
+        'hero-search-btn': 'Search Listings',
+        'hero-link-excl': 'Explore Exclusive Off-Market Homes →',
+        'hero-link-eval': 'Request a Free Home Valuation →',
 
-        // Employees page
-        'emp-page-title': 'Our Team',
-        'emp-page-subtitle': 'Meet the experienced professionals at TaiHome Realty',
-        'emp-view-btn': 'View Profile',
+        // Home — Stats
+        'stat-sold': 'Homes Sold',
+        'stat-exp': 'Years in the GTA',
+        'stat-sat': 'Client Satisfaction',
+        'stat-langs-val': 'EN · 中文 · 粵語',
+        'stat-langs': 'Multilingual Team',
+
+        // Home — Featured Listings & Services
+        'feat-eyebrow': 'Featured Portfolio',
+        'feat-title': 'Signature Properties Across the GTA',
+        'feat-view-all': 'View All Listings →',
+        'svc-eyebrow': 'Full-Service Brokerage',
+        'section-what': 'Tailored Real Estate Advisory',
+        'svc-buying-title': 'Buying a Home',
+        'svc-buying-desc': 'Explore curated GTA residences and let our local specialists guide every step from tour to closing.',
+        'svc-buying-cta': 'Browse Listings →',
+        'svc-selling-title': 'Selling Strategically',
+        'svc-selling-desc': 'Maximize value with precision market pricing, architectural staging, and targeted bilingual outreach.',
+        'svc-selling-cta': 'Selling Process →',
+        'svc-renting-title': 'Exclusives & Leasing',
+        'svc-renting-desc': 'Access private exclusive assignments, luxury leases, and high-yield GTA investment properties.',
+        'svc-renting-cta': 'View Exclusives →',
+        'svc-join-title': 'Join Our Brokerage',
+        'svc-join-desc': 'Keep more of every commission with $0 monthly desk fees and a flat $500 transaction fee.',
+        'svc-join-cta': 'Agent Benefits →',
+
+        // Team Page
+        'emp-eyebrow': 'Licensed Professionals',
+        'emp-page-title': 'Meet Our Team',
+        'emp-page-subtitle': 'Dedicated Greater Toronto Area realtors committed to transparent advice and exceptional outcomes.',
+        'emp-view-btn': 'View Realtor.ca Profile ↗',
         'emp-back': 'Back to Team',
         'emp-call': 'Call',
         'emp-email': 'Email',
         'emp-deals': 'Deals Closed',
         'emp-years': 'Experience',
         'emp-contact-title': 'Get in Touch',
+        'role-broker': 'Broker of Record',
+        'role-sales': 'Sales Representative',
 
-        // Selling page
+        // Selling & Evaluation Page
+        'sell-eyebrow': 'Seller Representation',
         'sell-page-title': 'Selling Your Home',
-        'sell-page-subtitle': 'Expert guidance from listing to closing',
+        'sell-page-subtitle': 'Strategic pricing, elevated presentation, and skilled negotiation from listing to closing.',
         'sell-tab-sell': 'Sell Your Home',
-        'sell-tab-eval': 'Home Evaluation',
-        'sell-why-title': 'Why Sell With TaiHome?',
-        'sell-why-desc': 'We leverage local market knowledge, professional staging, and powerful marketing to get you top dollar.',
-        'step1-title': 'Free Consultation',
-        'step1-desc': 'We review your goals, timeline, and the current market to build a tailored selling strategy.',
+        'sell-tab-eval': 'Free Home Evaluation',
+        'sell-why-title': 'Why List With TaiHome Realty?',
+        'sell-why-desc': 'We combine hyper-local neighbourhood data, professional staging, and bilingual GTA buyer reach to command top market value.',
+        'step1-title': ' Consultation & Pricing',
+        'step1-desc': 'We review comparable sales, your timeline, and market momentum to craft a tailored pricing strategy.',
         'step2-title': 'Prepare & Stage',
-        'step2-desc': 'Our team advises on improvements and professional staging to maximize your home\'s appeal.',
-        'step3-title': 'List & Market',
-        'step3-desc': 'MLS listing, social media campaigns, professional photography, and targeted outreach.',
+        'step2-desc': 'Targeted improvement advice and professional staging ensure your home makes an unforgettable first impression.',
+        'step3-title': 'Launch & Market',
+        'step3-desc': 'MLS® syndication, architectural photography, digital campaigns, and direct outreach across our buyer network.',
         'step4-title': 'Negotiate & Close',
-        'step4-desc': 'We negotiate on your behalf and handle all paperwork through to a smooth closing.',
-        'cta-sell-title': 'Ready to list your home?',
-        'cta-sell-desc': 'Contact us today for a no-obligation conversation.',
-        'cta-sell-btn': 'Contact Us',
-        'eval-title': 'Free Home Evaluation',
-        'eval-desc': 'Find out what your home is worth in today\'s market — no obligation, no pressure.',
+        'step4-desc': 'We advocate fiercely on terms and price, coordinating every detail through a seamless closing day.',
+        'cta-sell-title': 'Ready to discuss your property?',
+        'cta-sell-desc': 'Speak with a TaiHome advisor for a confidential, no-obligation consultation.',
+        'cta-sell-btn': 'Schedule a Conversation',
+
+        'eval-title': 'Complimentary Home Evaluation',
+        'eval-desc': 'Discover what your property could command in today\'s Greater Toronto market — zero obligation.',
         'eval-address-label': 'Property Address',
         'eval-address-ph': '123 Main Street, Toronto, ON',
         'eval-type-label': 'Property Type',
@@ -76,299 +106,465 @@ const translations = {
         'eval-name-label': 'Your Name',
         'eval-name-ph': 'Jane Smith',
         'eval-phone-label': 'Phone Number',
-        'eval-phone-ph': '(416) 555-0100',
+        'eval-phone-ph': '(647) 701-5158',
         'eval-email-label': 'Email Address',
         'eval-email-ph': 'jane@email.com',
-        'eval-notes-label': 'Additional Notes',
-        'eval-notes-ph': 'Any recent renovations, unique features, or timeline...',
-        'eval-submit': 'Request Evaluation',
-        'eval-success-title': 'Request Received!',
-        'eval-success-desc': 'One of our agents will reach out within 24 hours with your home evaluation.',
+        'eval-notes-label': 'Additional Details',
+        'eval-notes-ph': 'Recent upgrades, lot features, or ideal timeline…',
+        'eval-submit': 'Request Free Evaluation',
+        'eval-success-title': 'Evaluation Request Received',
+        'eval-success-desc': 'Thank you — one of our senior GTA agents will prepare your market report and reach out within 24 hours.',
 
-        // Buying page
+        // Listings & Exclusives
+        'buy-eyebrow': 'Brokerage Portfolio',
         'buy-page-title': 'Office Listings',
-        'buy-page-subtitle': 'Explore available properties in the Greater Toronto Area',
-        'buy-search-ph': 'Search by address or neighbourhood…',
-        'buy-filter-type': 'All Types',
+        'buy-page-subtitle': 'Explore active residences and recent transactions across Toronto, North York, Markham, Vaughan, and Mississauga.',
+        'pill-available': 'Available',
+        'pill-sold': 'Sold Portfolio',
+        'pill-all': 'All Listings',
+        'buy-search-ph': 'Search by street, city, or neighbourhood…',
+        'buy-filter-type': 'All Property Types',
         'buy-filter-price': 'Any Price',
-        'buy-empty': 'No listings match your search. Try adjusting filters.',
+        'price-800': 'Under $800K',
+        'price-1500': 'Under $1.5M',
+        'price-2500': 'Under $2.5M',
+        'price-4000': 'Under $4M',
+        'buy-empty': 'No properties match your current filters. Try viewing All Listings or adjusting price.',
 
-        // Renting page
-        'rent-page-title': 'Exclusives',
-        'rent-page-subtitle': 'Find exclusive listings across the Greater Toronto Area',
+        'rent-eyebrow': 'Private & Rental Collection',
+        'rent-page-title': 'Exclusives & Leases',
+        'rent-page-subtitle': 'Curated rental residences and exclusive opportunities across the Greater Toronto Area.',
 
-        // Join page
-        'join-page-title': 'Apply Now',
-        'join-page-subtitle': 'Welcome Join the TaiHome Realty family and grow your real estate career',
-        'join-why-title': 'TaiHome Realty Policies:',
-        'join-b1': 'Low Cost, Remote Work;',
-        'join-b2': 'No Desk Fee (No Office Yet);',
-        'join-b3': 'Lease 10%;',
-        'join-b4': 'Selling & Buying $500;',
-        'join-b5': 'No Deal No Charges;',
-        'join-b6': 'No Contract;',
-        'join-b7': 'Lowest Charges In GTA;',
-        'join-form-title': 'Submit Your Application',
-        'join-please-read': 'Please read carefully — we are currently accepting applications for licensed real estate agents in Ontario. All applicants must hold a valid RECO registration.',
+        // Join Our Firm
+        'join-eyebrow': 'Careers for Ontario RECO Agents',
+        'join-page-title': 'Keep More of Every Commission',
+        'join-page-subtitle': 'Grow your real estate business at TaiHome Realty with industry-low flat fees, cloud flexibility, and full brokerage backing.',
+        'comm1-eyebrow': 'Buy & Sell Closings',
+        'comm1-fig': '$500',
+        'comm1-title': 'Flat Transaction Fee',
+        'comm1-desc': 'Pay just $500 per residential sale or purchase closing — keep the rest of your hard-earned commission.',
+        'comm2-eyebrow': 'Zero Overhead',
+        'comm2-fig': '$0 / mo',
+        'comm2-title': 'Monthly Desk Fee',
+        'comm2-desc': 'Cloud-first remote workflow supported by our North York brokerage headquarters — zero recurring monthly fees.',
+        'comm3-eyebrow': 'Leasing & Freedom',
+        'comm3-fig': '90 / 10',
+        'comm3-title': 'Lease Split · No Lock-In',
+        'comm3-desc': 'Retain 90% on lease transactions (only 10% brokerage split) with zero lock-in contracts.',
+        'perk-1': 'No Deal, No Charges',
+        'perk-2': 'Zero Lock-In Contract',
+        'perk-3': '100% Cloud-Ready Workflow',
+        'perk-4': 'Lowest Brokerage Fees in GTA',
+
+        'join-form-title': 'Submit Your Agent Application',
+        'join-please-read': 'We welcome licensed real estate salespersons and brokers across Ontario. Applicants must hold an active RECO registration in good standing.',
         'app-first-label': 'First Name',
         'app-first-ph': 'Jane',
         'app-last-label': 'Last Name',
         'app-last-ph': 'Smith',
-        'app-email-label': 'Email',
+        'app-email-label': 'Email Address',
         'app-email-ph': 'jane@email.com',
-        'app-phone-label': 'Phone',
-        'app-phone-ph': '(416) 555-0100',
+        'app-phone-label': 'Phone Number',
+        'app-phone-ph': '(647) 701-5158',
         'app-reco-label': 'RECO Registration #',
         'app-reco-ph': 'e.g. 4567890',
         'app-exp-label': 'Years of Experience',
         'app-langs-label': 'Languages Spoken',
         'app-langs-ph': 'e.g. English, Mandarin, Cantonese',
-        'app-why-label': 'Why do you want to join TaiHome?',
-        'app-why-ph': 'Tell us about yourself and your goals…',
+        'app-why-label': 'Tell Us About Your Goals',
+        'app-why-ph': 'Share your focus neighbourhoods and what you are looking for in a brokerage…',
         'app-submit': 'Submit Application',
-        'app-success-title': 'Application Submitted!',
-        'app-success-desc': 'Thank you for your interest. We\'ll review your application and be in touch within 3\u20135 business days.',
+        'app-success-title': 'Application Submitted',
+        'app-success-desc': 'Thank you for applying to TaiHome Realty. Our Broker of Record will review your details and reach out within 3–5 business days.',
 
-        // Contact page
-        'contact-page-title': 'Contact Us',
-        'contact-page-subtitle': 'We\'re here to help \u2014 reach out any time',
-        'contact-phone-label': 'Phone',
+        // Contact Page
+        'contact-eyebrow': 'Direct Advisory',
+        'contact-page-title': 'Contact TaiHome Realty',
+        'contact-page-subtitle': 'Have a question about buying, selling, or joining our brokerage? Reach out any time.',
+        'contact-phone-label': 'Direct Phone',
         'contact-email-label': 'Email',
-        'contact-office-label': 'Office',
-        'contact-hours-label': 'Office Hours',
+        'contact-office-label': 'North York Office',
+        'contact-map-cta': 'Open in Google Maps ↗',
+        'contact-hours-label': 'Business Hours',
         'contact-hours-val': 'Mon–Fri: 9:00 AM – 6:00 PM<br>Sat: 10:00 AM – 4:00 PM',
-        'c-name-label': 'Name',
+        'c-name-label': 'Full Name',
         'c-name-ph': 'Your Name',
-        'c-phone-label': 'Phone',
+        'c-phone-label': 'Phone Number',
         'c-phone-ph': '(416) 555-0000',
-        'c-email-label': 'Email',
+        'c-email-label': 'Email Address',
         'c-email-ph': 'you@email.com',
-        'c-subject-label': 'Subject',
-        'c-subject-ph': 'How can we help?',
+        'c-subject-label': 'How Can We Help?',
+        'c-subject-ph': 'Select a topic',
         'c-msg-label': 'Message',
-        'c-msg-ph': 'Tell us more about how we can help…',
+        'c-msg-ph': 'Tell us about the property, neighbourhood, or timeline…',
         'c-submit': 'Send Message',
-        'contact-success-title': 'Message Sent!',
-        'contact-success-desc': 'Thanks for reaching out. An agent will contact you within one business day.',
+        'contact-success-title': 'Message Sent',
+        'contact-success-desc': 'Thank you for reaching out. A TaiHome Realty advisor will respond within one business day.',
 
+        // Footer & Property Card Tokens
         'footer-tagline': 'Real Estate Services across the Greater Toronto Area',
-        'footer-rights': 'All Rights Reserved. Independently Developed.',
-
-        // Translate button
-        'translate-btn': '中文',
+        'footer-rights': 'All Rights Reserved.',
+        'unit-bd': 'bd',
+        'unit-ba': 'ba',
+        'unit-sqft': 'sqft',
+        'unit-mo': '/mo',
+        'showing-prefix': 'Showing',
+        'showing-suffix': 'properties',
+        'tag-New': 'New',
+        'tag-For Sale': 'For Sale',
+        'tag-For Rent': 'For Rent',
+        'tag-Sold': 'Sold',
+        'tag-Sold Conditional': 'Sold Cond.',
+        'tag-Delisted': 'Off Market',
+        'tag-Leased': 'Leased',
+        'type-Detached': 'Detached',
+        'type-Semi-Detached': 'Semi-Detached',
+        'type-Townhouse': 'Townhouse',
+        'type-Condo': 'Condo',
+        'type-Retail': 'Commercial Retail'
     },
 
     zh: {
-        'bar-title': '太後地產',
+        // Brand & Header
+        'brand-name': '太後地產',
+        'brand-sub': 'TaiHome Realty Inc.*',
+        'header-cta': '免费估价',
+        'translate-btn': 'EN',
+
+        // Navigation
         'nav-home': '主页',
-        'nav-employees': '我们的团队',
+        'nav-employees': '精英团队',
         'nav-selling': '房屋出售',
         'nav-buying': '公司房源',
-        'nav-renting': '暗盘',
-        'nav-joinFirm': '加入我们',
+        'nav-renting': '独家暗盘',
+        'nav-joinFirm': '加盟我们',
         'nav-contact': '联系我们',
-        'nav-sell-home': '出售房屋',
-        'nav-eval': '房屋估价',
-        'hero-eyebrow': '多伦多值得信赖的房地产公司',
-        'hero-title-main': '找到您理想的',
+        'nav-sell-home': '委托售房',
+        'nav-eval': '免费房屋估价',
+
+        // Home — Hero
+        'hero-eyebrow': '大多伦多地区精品地产行',
+        'hero-title-main': '在多伦多寻觅您理想的',
         'hero-title-em': '家',
-        'hero-subtitle': '太後地產公司将买家、卖家和租户与经验丰富的经纪人联系起来，我们始终将您的目标放在首位。',
-        'hero-btn-browse': '浏览房源',
-        'hero-btn-agent': '联系经纪人',
-        'stat-sold': '成交房屋',
-        'stat-exp': '从业年限',
+        'hero-title-end': '',
+        'hero-subtitle': '太後地產连接大多伦多地区买家、卖家与投资者，经验丰富的多语种经纪团队始终将您的目标放在首位。',
+        'hero-search-ph': '搜索社区或街道（如 Bayview Village, Willowdale）…',
+        'hero-search-type': '全部房产类型',
+        'hero-search-price': '不限最高预算',
+        'hero-search-btn': '搜索房源',
+        'hero-link-excl': '浏览独家暗盘与租赁 →',
+        'hero-link-eval': '预约免费专业房屋估价 →',
+
+        // Home — Stats
+        'stat-sold': '累计成交房产',
+        'stat-exp': '深耕大多伦多年限',
         'stat-sat': '客户满意度',
-        'section-what': '我们的服务',
-        'svc-buying-title': '公司房源',
-        'svc-buying-desc': '浏览我们精选的房源，让我们的经纪人引导您找到理想的家。',
-        'svc-selling-title': '房屋出售',
-        'svc-selling-desc': '通过精准定价、专业摄影和专家谈判，让您的房产卖出最佳价格。',
-        'svc-renting-title': '暗盘',
-        'svc-renting-desc': '在大多伦多地区发现优质出租房屋和投资物业。',
-        'svc-join-title': '加入团队',
-        'svc-join-desc': '欢迎有进取心的经纪人加入，在太後地產发展您的事业。',
-        'emp-page-title': '我们的团队',
-        'emp-page-subtitle': '认识太後地產经验丰富的专业人士',
-        'emp-view-btn': '查看简介',
-        'emp-back': '返回团队',
+        'stat-langs-val': '国 · 粤 · 英',
+        'stat-langs': '多语种专业服务',
+
+        // Home — Featured Listings & Services
+        'feat-eyebrow': '精选房源展示',
+        'feat-title': '大多伦多地区代表性物业',
+        'feat-view-all': '查看全部房源 →',
+        'svc-eyebrow': '全方位地产顾问',
+        'section-what': '量身定制的房地产服务',
+        'svc-buying-title': '安心置业买房',
+        'svc-buying-desc': '精选大多伦多优质住宅与学区名邸，专业经纪全程陪同看房、议价与交割。',
+        'svc-buying-cta': '浏览在售房源 →',
+        'svc-selling-title': '高价策略售房',
+        'svc-selling-desc': '结合精准社区数据分析、专业软装布置与中英双语全渠道推广，助您卖出理想高价。',
+        'svc-selling-cta': '了解售房流程 →',
+        'svc-renting-title': '暗盘与精品租赁',
+        'svc-renting-desc': '尊享非公开暗盘资源、优质住宅租赁及高回报投资物业配置建议。',
+        'svc-renting-cta': '查看独家暗盘 →',
+        'svc-join-title': '经纪人低费加盟',
+        'svc-join-desc': '零月度办公桌费，买卖每单仅收 $500 固定费用，最大化保留您的佣金收入。',
+        'svc-join-cta': '查看加盟政策 →',
+
+        // Team Page
+        'emp-eyebrow': '持牌专业团队',
+        'emp-page-title': '认识我们的团队',
+        'emp-page-subtitle': '深耕大多伦多核心社区，为您提供诚信、专业、高效的房地产咨询服务。',
+        'emp-view-btn': '查看 Realtor.ca 主页 ↗',
+        'emp-back': '返回团队列表',
         'emp-call': '致电',
         'emp-email': '发邮件',
         'emp-deals': '成交记录',
         'emp-years': '从业经验',
         'emp-contact-title': '立即联系',
-        'sell-page-title': '出售您的房屋',
-        'sell-page-subtitle': '从挂牌到成交的专业指导',
-        'sell-tab-sell': '出售房屋',
-        'sell-tab-eval': '房屋估价',
-        'sell-why-title': '为何选择泰家出售？',
-        'sell-why-desc': '我们凭借深厚的本地市场知识、专业布置和强大的营销推广，助您卖出最高价。',
-        'step1-title': '免费咨询',
-        'step1-desc': '我们审查您的目标、时间安排和当前市场，制定专属销售策略。',
-        'step2-title': '准备与布置',
-        'step2-desc': '我们的团队为您提供装修建议和专业布置，最大化房产的吸引力。',
-        'step3-title': '挂牌与推广',
-        'step3-desc': 'MLS挂牌、社交媒体营销、专业摄影及精准客户触达。',
-        'step4-title': '谈判与成交',
-        'step4-desc': '我们代表您进行谈判，处理全部文件，确保顺利过户。',
-        'cta-sell-title': '准备好挂牌了吗？',
-        'cta-sell-desc': '立即联系我们，享受无压力的免费咨询。',
-        'cta-sell-btn': '联系我们',
-        'eval-title': '免费房屋估价',
-        'eval-desc': '了解您房屋在当前市场的价值——无义务，无压力。',
-        'eval-address-label': '房产地址',
-        'eval-address-ph': '123 Main Street, Toronto, ON',
+        'role-broker': '持牌主理经纪 (Broker of Record)',
+        'role-sales': '注册地产经纪',
+
+        // Selling & Evaluation Page
+        'sell-eyebrow': '卖家专属代理',
+        'sell-page-title': '出售您的房产',
+        'sell-page-subtitle': '从精准估价、形象包装到谈判过户，全程为您保驾护航。',
+        'sell-tab-sell': '出售房屋流程',
+        'sell-tab-eval': '免费房屋估价',
+        'sell-why-title': '为何委托太後地產出售？',
+        'sell-why-desc': '我们凭借本地社区成交数据库、专业家居布置与跨语种买家网络，为您争取最优成交价与条款。',
+        'step1-title': '免费咨询与定价',
+        'step1-desc': '深入分析周边最新成交数据与市场趋势，结合您的时间安排制定专属挂牌策略。',
+        'step2-title': '卖前准备与布置',
+        'step2-desc': '提供高性价比焕新建议与专业软装设计，全面提升房屋第一印象与视觉吸引力。',
+        'step3-title': '全渠道挂牌推广',
+        'step3-desc': 'MLS® 权威发布、建筑级摄影摄像、社交媒体矩阵及精准买家圈层定向推介。',
+        'step4-title': '专业谈判与交割',
+        'step4-desc': '代表您的核心利益审阅每份报价，把控合同细节直至顺利完成产权交割。',
+        'cta-sell-title': '准备了解您的房屋市场潜力？',
+        'cta-sell-desc': '立即联系我们的资深经纪，获取一对一保密售房咨询。',
+        'cta-sell-btn': '预约售房咨询',
+
+        'eval-title': '免费专业房屋估价',
+        'eval-desc': '了解您的房产在当前大多伦多市场的真实价值——无任何附加义务。',
+        'eval-address-label': '房产详细地址',
+        'eval-address-ph': '例如：51 Foxwarren Dr, Toronto, ON',
         'eval-type-label': '房产类型',
-        'eval-type-ph': '请选择',
+        'eval-type-ph': '请选择类型',
         'eval-beds-label': '卧室数量',
         'eval-beds-ph': '请选择',
         'eval-name-label': '您的姓名',
-        'eval-name-ph': '张三',
-        'eval-phone-label': '电话号码',
-        'eval-phone-ph': '(416) 555-0100',
-        'eval-email-label': '电子邮件',
-        'eval-email-ph': 'zhang@email.com',
-        'eval-notes-label': '备注',
-        'eval-notes-ph': '近期装修、特色或时间要求等……',
-        'eval-submit': '申请估价',
-        'eval-success-title': '申请已收到！',
-        'eval-success-desc': '我们的经纪人将在24小时内与您联系，提供房屋估价报告。',
+        'eval-name-ph': '张先生 / 李女士',
+        'eval-phone-label': '联系电话',
+        'eval-phone-ph': '(647) 701-5158',
+        'eval-email-label': '电子邮箱',
+        'eval-email-ph': 'name@email.com',
+        'eval-notes-label': '补充说明',
+        'eval-notes-ph': '近期翻新升级、地块特色或计划出售时间…',
+        'eval-submit': '获取免费估价报告',
+        'eval-success-title': '估价申请已收到！',
+        'eval-success-desc': '感谢您的信任，我们的资深经纪将在 24 小时内为您准备市场评估并与您联系。',
+
+        // Listings & Exclusives
+        'buy-eyebrow': '精选物业组合',
         'buy-page-title': '公司房源',
-        'buy-page-subtitle': '浏览大多伦多地区的可行房源',
-        'buy-search-ph': '按地址或社区搜索…',
-        'buy-filter-type': '全部类型',
+        'buy-page-subtitle': '浏览多伦多、北约克、万锦、旺市及密西沙加的在售名邸与近期成交案例。',
+        'pill-available': '在售房源',
+        'pill-sold': '成交记录',
+        'pill-all': '全部房源',
+        'buy-search-ph': '按街道地址、城市或社区名称搜索…',
+        'buy-filter-type': '全部房产类型',
         'buy-filter-price': '不限价格',
-        'buy-empty': '没有符合条件的房源，请尝试调整筛选条件。',
-        'rent-page-title': '暗盘',
-        'rent-page-subtitle': '大多伦多地区的优质出租房源',
-        'join-page-title': '立即申请',
-        'join-page-subtitle': '欢迎加盟太後地產大家庭，发展您的房地产事业',
-        'join-why-title': '太後地產政策：',
-        'join-b1': '低成本，远程办公;',
-        'join-b2': '无办公费（暂无办公室）;',
-        'join-b3': '租赁收费10%;',
-        'join-b4': '买卖收费$500;',
-        'join-b5': '不做单不收费;',
-        'join-b6': '无合约;',
-        'join-b7': '大多伦多地区收费最低;',
-        'join-form-title': '提交申请',
-        'join-please-read': '请仔细阅读——我们目前正在招募安大略省持牌房地产经纪人。所有申请人须持有有效的RECO牌照。',
-        'app-first-label': '名字',
-        'app-first-ph': '三',
-        'app-last-label': '姓氏',
-        'app-last-ph': '张',
-        'app-email-label': '电子邮件',
-        'app-email-ph': 'zhang@email.com',
-        'app-phone-label': '电话',
-        'app-phone-ph': '(416) 555-0100',
-        'app-reco-label': 'RECO注册号',
+        'price-800': '$80万以下',
+        'price-1500': '$150万以下',
+        'price-2500': '$250万以下',
+        'price-4000': '$400万以下',
+        'buy-empty': '暂无符合当前筛选条件的房源，请尝试切换“全部房源”或放宽价格范围。',
+
+        'rent-eyebrow': '私享暗盘与租赁',
+        'rent-page-title': '独家暗盘与租房',
+        'rent-page-subtitle': '精选大多伦多地区优质出租物业及非公开独家房源机会。',
+
+        // Join Our Firm
+        'join-eyebrow': '安省持牌经纪招募',
+        'join-page-title': '保留更多佣金，释放执业自由',
+        'join-page-subtitle': '加入太後地產 (TaiHome Realty)，享受全大多伦多极具竞争力的超低平价收费与云端支持。',
+        'comm1-eyebrow': '房屋买卖交割',
+        'comm1-fig': '$500',
+        'comm1-title': '每单固定交易费',
+        'comm1-desc': '住宅买卖成交每单仅收 $500 固定费用，助您保留绝大部分辛勤佣金。',
+        'comm2-eyebrow': '零固定负担',
+        'comm2-fig': '$0 / 月',
+        'comm2-title': '零月度办公桌费',
+        'comm2-desc': '现代化云端远程办公体系，配合北约克总部行政支持，无任何按月固定收费。',
+        'comm3-eyebrow': '租赁分成与自由度',
+        'comm3-fig': '90 / 10',
+        'comm3-title': '租赁高分成 · 无捆绑合约',
+        'comm3-desc': '租赁业务经纪人保留 90%（公司仅收 10%），无业绩捆绑合约，来去自由。',
+        'perk-1': '不成交绝不收费',
+        'perk-2': '无长期捆绑合约',
+        'perk-3': '高效云端远程办公',
+        'perk-4': 'GTA 超低经纪行收费',
+
+        'join-form-title': '在线提交加盟申请',
+        'join-please-read': '我们热忱欢迎安大略省持牌地产经纪与 Broker 加入。所有申请人须持有有效且信誉良好的 RECO 注册牌照。',
+        'app-first-label': '名字 (First Name)',
+        'app-first-ph': 'Ming',
+        'app-last-label': '姓氏 (Last Name)',
+        'app-last-ph': 'Zhang',
+        'app-email-label': '电子邮箱',
+        'app-email-ph': 'ming@email.com',
+        'app-phone-label': '联系电话',
+        'app-phone-ph': '(647) 701-5158',
+        'app-reco-label': 'RECO 注册编号',
         'app-reco-ph': '例如：4567890',
         'app-exp-label': '从业年限',
-        'app-langs-label': '使用语言',
+        'app-langs-label': '工作语言',
         'app-langs-ph': '例如：普通话、粤语、英语',
-        'app-why-label': '您为什么想加入太後？',
-        'app-why-ph': '请介绍您自己及您的职业目标……',
-        'app-submit': '提交申请',
-        'app-success-title': '申请已提交！',
-        'app-success-desc': '感谢您的关注，我们将在3至5个工作日内审核您的申请并与您联系。',
-        'contact-page-title': '联系我们',
-        'contact-page-subtitle': '随时欢迎您联系我们',
-        'contact-phone-label': '电话',
-        'contact-email-label': '电子邮件',
-        'contact-office-label': '办公室',
+        'app-why-label': '您的执业方向与期望',
+        'app-why-ph': '请简述您深耕的社区或希望获得的经纪行支持…',
+        'app-submit': '提交加盟申请',
+        'app-success-title': '加盟申请已提交！',
+        'app-success-desc': '感谢您关注太後地產，我们的主理经纪人将在 3–5 个工作日内审阅并与您联系。',
+
+        // Contact Page
+        'contact-eyebrow': '随时为您服务',
+        'contact-page-title': '联系太後地產',
+        'contact-page-subtitle': '无论您计划买房、卖房、租房或咨询经纪加盟，欢迎随时与我们联系。',
+        'contact-phone-label': '咨询热线',
+        'contact-email-label': '电子邮箱',
+        'contact-office-label': '北约克办公地址',
+        'contact-map-cta': '在 Google 地图中查看 ↗',
         'contact-hours-label': '办公时间',
-        'contact-hours-val': '周一至周五：上午9:00 – 下午6:00<br>周六：上午10:00 – 下午4:00',
-        'c-name-label': '姓名',
-        'c-name-ph': '您的姓名',
-        'c-phone-label': '电话',
+        'contact-hours-val': '周一至周五：9:00 AM – 6:00 PM<br>周六：10:00 AM – 4:00 PM',
+        'c-name-label': '您的姓名',
+        'c-name-ph': '请输入姓名',
+        'c-phone-label': '联系电话',
         'c-phone-ph': '(416) 555-0000',
-        'c-email-label': '电子邮件',
+        'c-email-label': '电子邮箱',
         'c-email-ph': 'you@email.com',
-        'c-subject-label': '主题',
-        'c-subject-ph': '我们能为您做什么？',
-        'c-msg-label': '留言',
-        'c-msg-ph': '请详细描述您的需求……',
+        'c-subject-label': '咨询主题',
+        'c-subject-ph': '请选择咨询事项',
+        'c-msg-label': '留言内容',
+        'c-msg-ph': '请告诉我们您关注的房产、社区或时间计划…',
         'c-submit': '发送留言',
-        'contact-success-title': '留言已发送！',
-        'contact-success-desc': '感谢您的联系，我们的经纪人将在一个工作日内与您联系。',
-        'footer-tagline': '大多伦多地区房地产服务',
-        'footer-rights': '版权所有。独立开发。',
-        'translate-btn': 'English',
+        'contact-success-title': '留言已成功发送！',
+        'contact-success-desc': '感谢您的来信，我们的地产顾问将在一个工作日内与您取得联系。',
+
+        // Footer & Property Card Tokens
+        'footer-tagline': '大多伦多地区专业房地产经纪服务',
+        'footer-rights': '版权所有。',
+        'unit-bd': '卧',
+        'unit-ba': '卫',
+        'unit-sqft': '平方尺',
+        'unit-mo': '/月',
+        'showing-prefix': '当前显示',
+        'showing-suffix': '套房源',
+        'tag-New': '新盘上市',
+        'tag-For Sale': '火热在售',
+        'tag-For Rent': '诚意招租',
+        'tag-Sold': '已成交',
+        'tag-Sold Conditional': '有条件售出',
+        'tag-Delisted': '已下架',
+        'tag-Leased': '已租出',
+        'type-Detached': '独立屋',
+        'type-Semi-Detached': '半独立屋',
+        'type-Townhouse': '镇屋',
+        'type-Condo': '公寓',
+        'type-Retail': '商业铺位'
     }
 };
 
-// ── Theme Toggle (Dark = gold-on-black, Light = black-on-gold) ─
-(function () {
-    const toggle = document.querySelector('[data-theme-toggle]');
+const langNameMapZh = {
+    'English': '英语',
+    'Mandarin': '普通话',
+    'Cantonese': '粤语',
+    'Mongolian': '蒙古语'
+};
+
+let currentLang = 'en';
+try {
+    const savedLang = localStorage.getItem('taihome-lang');
+    if (savedLang === 'zh' || savedLang === 'en') currentLang = savedLang;
+} catch (e) {}
+
+// ── 1. Theme Toggle (Dark: Obsidian & Champagne | Light: Warm Ivory) ───────
+(function initTheme() {
     const root = document.documentElement;
     let theme = 'dark';
+    try {
+        const saved = localStorage.getItem('taihome-theme');
+        if (saved === 'light' || saved === 'dark') theme = saved;
+    } catch (e) {}
 
-    const iconDark  = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-    const iconLight = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+    const iconSun  = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+    const iconMoon = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
 
-    function apply() {
+    function applyTheme() {
         root.setAttribute('data-theme', theme);
-        if (toggle) {
-        toggle.innerHTML = theme === 'dark' ? iconDark : iconLight;
-        toggle.setAttribute('title', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
-        }
-    }
-
-    apply();
-
-    if (toggle) {
-        toggle.addEventListener('click', () => {
-        theme = theme === 'dark' ? 'light' : 'dark';
-        apply();
+        document.querySelectorAll('[data-theme-toggle]').forEach(btn => {
+            btn.innerHTML = theme === 'dark' ? iconSun : iconMoon;
+            const label = theme === 'dark' ? 'Switch to Warm Ivory light mode' : 'Switch to Obsidian dark mode';
+            btn.setAttribute('title', label);
+            btn.setAttribute('aria-label', label);
         });
     }
+
+    applyTheme();
+
+    document.querySelectorAll('[data-theme-toggle]').forEach(btn => {
+        btn.addEventListener('click', () => {
+            theme = theme === 'dark' ? 'light' : 'dark';
+            try { localStorage.setItem('taihome-theme', theme); } catch (e) {}
+            applyTheme();
+        });
+    });
 })();
 
-// ── Page Navigation ───────────────────────────────────────────
-function showPage(tabId) {
+// ── 2. SPA Page Navigation & Mobile Drawer ────────────────────────────────
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileDrawer  = document.getElementById('mobile-drawer');
+
+function closeMobileDrawer() {
+    if (!mobileDrawer || !mobileMenuBtn) return;
+    mobileDrawer.classList.remove('open');
+    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+}
+
+if (mobileMenuBtn && mobileDrawer) {
+    mobileMenuBtn.addEventListener('click', () => {
+        const isOpen = mobileDrawer.classList.toggle('open');
+        mobileMenuBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') closeMobileDrawer();
+    });
+}
+
+function showPage(tabId, sectionId) {
+    const targetPage = document.getElementById('page-' + tabId);
+    if (!targetPage) return;
+
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.nav-tab').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.nav-tab, .mobile-nav-item').forEach(b => b.classList.remove('active'));
 
-    const page = document.getElementById('page-' + tabId);
-    if (page) page.classList.add('active');
+    targetPage.classList.add('active');
 
-    document.querySelectorAll(`.nav-tab[data-tab="${tabId}"]`).forEach(b => b.classList.add('active'));
+    document.querySelectorAll(`.nav-tab[data-tab="${tabId}"], .mobile-nav-item[data-tab="${tabId}"]`).forEach(b => {
+        b.classList.add('active');
+    });
+
+    if (tabId === 'selling' && sectionId) {
+        activateSellingSection(sectionId);
+    }
 
     const empDetails = document.getElementById('employee-details');
     if (empDetails) empDetails.classList.remove('active');
 
+    closeMobileDrawer();
     window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    if (tabId === 'home') {
+        setTimeout(animateCounters, 80);
+    }
 }
 
-document.querySelectorAll('.nav-tab').forEach(btn => {
-    btn.addEventListener('click', () => showPage(btn.dataset.tab));
+document.querySelectorAll('[data-tab]').forEach(el => {
+    if (el.closest('.dropdown-list')) return;
+    el.addEventListener('click', e => {
+        const tab = el.dataset.tab;
+        if (!tab) return;
+        if (el.tagName === 'A') e.preventDefault();
+        showPage(tab, el.dataset.section);
     });
-
-document.querySelectorAll('[data-tab]:not(.nav-tab):not(.dropdown-trigger)').forEach(el => {
-    el.addEventListener('click', () => showPage(el.dataset.tab));
 });
 
-
-// ── Dropdown Nav ─────────────────────────────────────────────
-const dropdown = document.querySelector('.dropdown');
-if (dropdown) {
+// Dropdown Navigation
+document.querySelectorAll('.dropdown').forEach(dropdown => {
     dropdown.addEventListener('mouseenter', () => dropdown.classList.add('open'));
     dropdown.addEventListener('mouseleave', () => dropdown.classList.remove('open'));
 
     dropdown.querySelectorAll('.dropdown-list a').forEach(link => {
-    link.addEventListener('click', e => {
-        // Multi-page nav uses plain links (no data-tab) — let them navigate normally.
-        if (!link.dataset.tab) return;
-        e.preventDefault();
-        showPage(link.dataset.tab);
-        const section = link.dataset.section;
-        if (section) activateSellingSection(section);
-        dropdown.classList.remove('open');
+        link.addEventListener('click', e => {
+            if (!link.dataset.tab) return;
+            e.preventDefault();
+            showPage(link.dataset.tab, link.dataset.section);
+            dropdown.classList.remove('open');
+        });
     });
-  });
-}
+});
 
-
-// ── Selling Tabs ─────────────────────────────────────────────
+// Selling Sub-Tabs
 function activateSellingSection(section) {
     document.querySelectorAll('.selling-tab').forEach(t => t.classList.remove('active'));
     document.querySelectorAll('.selling-section').forEach(s => s.classList.remove('active'));
@@ -378,20 +574,19 @@ function activateSellingSection(section) {
     if (sec) sec.classList.add('active');
 }
 
-document.querySelectorAll('.selling-tab').forEach(btn => {
+document.querySelectorAll('.selling-tab[data-section]').forEach(btn => {
     btn.addEventListener('click', () => activateSellingSection(btn.dataset.section));
 });
 
-
-// ── Employee Data ─────────────────────────────────────────────
+// ── 3. Employee Directory Data & Renderer ─────────────────────────────────
 const employees = [
     {
         id: 1,
         name: 'Adam Wei',
-        title: 'Broker of Record',
+        isBroker: true,
         initials: 'AW',
-        color: '#437a22',
-        languages: 'English, Mandarin',
+        color: '#b8973d',
+        languages: ['English', 'Mandarin'],
         bio: 'With years of experience in the Toronto real estate market, I provide professional, reliable, and personalized services to help you achieve your property goals. Whether you are buying, selling, renting, or investing, I am committed to delivering the best results.',
         phone: '+16477015158',
         email: 'adamwei2020@gmail.com',
@@ -403,11 +598,11 @@ const employees = [
     {
         id: 2,
         name: 'Linda Pu',
-        title: 'Salesperson',
+        isBroker: false,
         initials: 'LP',
         color: '#7a39bb',
-        languages: 'English, Mandarin',
-        bio: 'n/a',
+        languages: ['English', 'Mandarin'],
+        bio: '',
         phone: '+16477834588',
         email: 'pusubi2008@gmail.com',
         deals: 0,
@@ -418,13 +613,13 @@ const employees = [
     {
         id: 3,
         name: 'Bryan Lei',
-        title: 'Salesperson',
+        isBroker: false,
         initials: 'BL',
         color: '#01696f',
-        languages: 'English, Cantonese, Mandarin',
-        bio: 'n/a',
+        languages: ['English', 'Cantonese', 'Mandarin'],
+        bio: '',
         phone: '+16477015158',
-        email: 'n/a',
+        email: '',
         deals: 0,
         years: 0,
         img: 'employees/agent-bryan-lei.webp',
@@ -433,13 +628,13 @@ const employees = [
     {
         id: 4,
         name: 'David Cheng',
-        title: 'Salesperson',
+        isBroker: false,
         initials: 'DC',
         color: '#437a22',
-        languages: 'English, Mandarin',
-        bio: 'n/a',
+        languages: ['English', 'Mandarin'],
+        bio: '',
         phone: '+16477015158',
-        email: 'n/a',
+        email: '',
         deals: 0,
         years: 0,
         img: 'employees/agent-david-cheng.webp',
@@ -448,13 +643,13 @@ const employees = [
     {
         id: 5,
         name: 'Mahmood Kalantary',
-        title: 'Salesperson',
+        isBroker: false,
         initials: 'MK',
         color: '#006494',
-        languages: 'English',
-        bio: 'n/a',
+        languages: ['English'],
+        bio: '',
         phone: '+16477015158',
-        email: 'n/a',
+        email: '',
         deals: 0,
         years: 0,
         img: 'employees/agent-mahmood-kalantary.webp',
@@ -463,13 +658,13 @@ const employees = [
     {
         id: 6,
         name: 'Song Hai',
-        title: 'Salesperson',
+        isBroker: false,
         initials: 'SH',
         color: '#964219',
-        languages: 'English, Mandarin, Mongolian',
-        bio: 'n/a',
+        languages: ['English', 'Mandarin', 'Mongolian'],
+        bio: '',
         phone: '+16477015158',
-        email: 'n/a',
+        email: '',
         deals: 0,
         years: 0,
         img: 'employees/agent-song-hai.webp',
@@ -478,13 +673,13 @@ const employees = [
     {
         id: 7,
         name: 'Chandler Ren',
-        title: 'Salesperson',
+        isBroker: false,
         initials: 'CR',
         color: '#1d4ed8',
-        languages: 'English, Mandarin',
-        bio: 'n/a',
+        languages: ['English', 'Mandarin'],
+        bio: '',
         phone: '+16477015158',
-        email: 'n/a',
+        email: '',
         deals: 0,
         years: 0,
         img: 'employees/Chandler-Ren.webp',
@@ -492,141 +687,135 @@ const employees = [
     },
 ];
 
-
-// ── Render Employees ──────────────────────────────────────────
-// Split pages under pages/ set data-asset-base="../" on <body> so
-// relative image paths resolve correctly. Root page defaults to ''.
 var ASSET_BASE = (document.body && document.body.dataset && document.body.dataset.assetBase) || '';
+
 function renderEmployeesLang(lang) {
     const grid = document.getElementById('employees-grid');
     if (!grid) return;
-    const t = translations[lang];
-    grid.innerHTML = employees.map(emp => `
-        <a class="employee-card" href="${emp.url}" target="_blank" rel="noopener noreferrer" style="text-decoration:none; display:block; cursor:pointer;">
-        <div class="emp-avatar-wrap">
-            <img class="emp-photo" src="${ASSET_BASE}${emp.img}" alt="${emp.name}" width="96" height="96" loading="lazy" decoding="async"
-                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <div class="emp-avatar" style="background:${emp.color}22;color:${emp.color};display:none">${emp.initials}</div>
-        </div>
-        <div class="emp-info">
-            <h3 class="emp-name">${emp.name}</h3>
-            <p class="emp-title">${emp.title}</p>
-            <p class="emp-langs">${emp.languages}</p>
-        </div>
-        <span class="btn btn-ghost emp-view-btn">${t['emp-view-btn']}</span>
-        </a>
-    `).join('');
+    const t = translations[lang] || translations.en;
+    grid.innerHTML = employees.map(emp => {
+        const roleLabel = emp.isBroker ? t['role-broker'] : t['role-sales'];
+        const langPills = emp.languages.map(l => {
+            const label = lang === 'zh' ? (langNameMapZh[l] || l) : l;
+            return `<span class="emp-lang-pill">${label}</span>`;
+        }).join('');
+        return `
+        <a class="employee-card${emp.isBroker ? ' is-broker' : ''}" href="${emp.url}" target="_blank" rel="noopener noreferrer">
+            <div class="emp-avatar-wrap">
+                <img class="emp-photo" src="${ASSET_BASE}${emp.img}" alt="${emp.name}" width="112" height="112" loading="lazy" decoding="async"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="emp-avatar" style="background:${emp.color}22;color:${emp.color};display:none">${emp.initials}</div>
+            </div>
+            <div class="emp-info">
+                <span class="emp-role-badge">${roleLabel}</span>
+                <h3 class="emp-name">${emp.name}</h3>
+                <div class="emp-lang-pills">${langPills}</div>
+            </div>
+            <div class="emp-actions">
+                <span class="btn btn-ghost emp-view-btn">${t['emp-view-btn']}</span>
+            </div>
+        </a>`;
+    }).join('');
 }
 
-// Employee detail view (kept for any future use but cards now link externally)
-function openEmployeeDetail(id) {
-    const emp = employees.find(e => e.id === id);
-    if (!emp) return;
-
-    const avatarEl = document.getElementById('profile-avatar');
-    avatarEl.style.cssText = `background:${emp.color}22;color:${emp.color}`;
-    // Show photo in profile if available
-    avatarEl.innerHTML = `
-        <img src="${ASSET_BASE}${emp.img}" alt="${emp.name}" decoding="async"
-        style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:9999px;"
-        onerror="this.style.display='none';this.parentElement.textContent='${emp.initials}';"
-        />
-    `;
-
-    document.getElementById('profile-name').textContent = emp.name;
-    document.getElementById('profile-title').textContent = emp.title;
-    document.getElementById('profile-langs').innerHTML = `🌐 ${emp.languages}`;
-    document.getElementById('profile-bio').textContent = emp.bio;
-    document.getElementById('profile-stats').innerHTML = `
-        <div class="stat-pill">
-        <strong>${emp.deals}</strong>
-        <span>Deals Closed</span>
-        </div>
-        <div class="stat-pill">
-        <strong>${emp.years}</strong>
-        <span>Experience</span>
-        </div>
-    `;
-
-    const phoneEl = document.getElementById('profile-phone');
-    const emailEl = document.getElementById('profile-email');
-    if (phoneEl) phoneEl.href = 'tel:' + emp.phone;
-    if (emailEl) emailEl.href = 'mailto:' + emp.email;
-
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById('employee-details').classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-document.getElementById('back-btn')?.addEventListener('click', () => {
-    document.getElementById('employee-details').classList.remove('active');
-    document.getElementById('page-employees').classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-// ── Listings Data ─────────────────────────────────────────────
+// ── 4. Listings & Exclusives Data, Parser & Renderer ──────────────────────
 const listings = [
-    { id: 1, address: '3573 Colonial Drive, Mississauga (Erin Mills)', type: 'Detached', price: 1_399_000, beds: 6, baths: 7, sqft: "2500-3000", tag: 'New', url: 'https://www.realmaster.cn/s/okhAUZK3vS?lang=en', img: 'homes/3573ColonialDrive.webp' },
-    { id: 2, address: '38 Foxwarren Drive, Toronto (Bayview Village)', type: 'Detached', price: 3_690_000, beds: 7, baths: 7, sqft: "3500-5000", tag: 'New', url: 'https://www.realmaster.cn/s/1MejwwjRsz?lang=en', img: 'homes/38FoxwarrenDrive.webp' },
-    { id: 3, address: '6 Iron Street, Welland (Lincoln/Crowland)', type: 'Detached', price: 379_900, beds: 3, baths: 1, sqft: "700-1100", tag: 'For Sale', url: 'https://www.realmaster.cn/s/NX15qjS5EN?lang=en', img: 'homes/iron.webp' },
-    { id: 4, address: '3880 Midland Avenue, Toronto (Milliken), Unit 05', type: 'Retail', price: 500_000, sqft: "1080", tag: 'Sold Conditional', url: 'https://www.realmaster.cn/s/uABiSgjTDN?lang=en', img: 'homes/3880midlandave.webp' },
-    { id: 5, address: '72 Bowerbank Drive, Toronto (Newtonbrook East)', type: 'Detached', price: 1_279_000, beds: 5, baths: 3, sqft: "1500-2000", tag: 'For Sale', url: 'https://www.realmaster.cn/s/ZBkeSebC0o?lang=en', img: 'homes/bowerbank.webp' },
-    { id: 6, address: '43 Karen Street, Vaughan (Crestwood-Springfarm-Yorkhill)', type: 'Semi-Detached', price: 1_098_000, beds: 3, baths: 3, sqft: "1500-2000", tag: 'For Sale', url: 'https://www.realmaster.cn/s/bcgyqnEOsw?lang=en', img: 'homes/43Karen.webp' },
-    { id: 7, address: '12 Vonda Avenue, Toronto (Willowdale East)', type: 'Detached', price: 1_490_000, beds: 6, baths: 4, sqft: "2000-2500", tag: 'For Sale', url: 'https://www.realmaster.cn/s/jPdSGCP4Yp?lang=en', img: 'homes/12vondaave.webp' },
-    { id: 8, address: '462 Ellerslie Avenue, Toronto (Willowdale West)', type: 'Detached', price: 1_249_000, beds: 3, baths: 1, sqft: "700-1100", tag: 'For Sale', url: 'https://www.realmaster.cn/s/NXojbg7CAA?lang=en', img: 'homes/462ellerslieave.webp' },
-    { id: 9, address: '6 Vonda Avenue, Toronto (Willowdale East)', type: 'Detached', price: 1_490_000, beds: 5, baths: 3, sqft: "2000-2500", tag: 'New', url: 'https://www.realmaster.cn/s/qpRHKtSNvg?lang=en', img: 'homes/vonda.webp' },
-    { id: 10, address: '639 Royal York Road, Toronto (Stonegate-Queensway)', type: 'Detached', price: 1_340_000, beds: 4, baths: 3, sqft: "1500-2000", tag: 'Sold', url: 'https://www.realmaster.com/s/sxrQ4r6Kmk?lang=en', img: 'homes/639Royal.webp' },
-    { id: 11, address: '10 Centurion Court, Toronto (Bayview Woods-Steeles)', type: 'Detached', price: 1_400_000, beds: 6, baths: 4, sqft: "2000-2500", tag: 'Sold', url: 'https://www.realmaster.cn/s/nbJIAIxhOh?lang=en', img: 'homes/10Centurion.webp' },
-    { id: 12, address: '400 Alex Gardner Circle, Aurora (Aurora Village), Unit 74', type: 'Townhouse', price: 630_000, beds: 2, baths: 3, sqft: "1200-1399", tag: 'Sold', url: 'https://www.realmaster.cn/s/MXu7A1nDVn?lang=en', img: 'homes/400Alex.webp' },
-    { id: 13, address: '8 Eaton Park Lane, Toronto (L\'Amoreaux), Unit 3', type: 'Townhouse', price: 940_000, beds: 5, baths: 4, sqft: "1500-2000", tag: 'Sold', url: 'https://www.realmaster.cn/s/eBoKtPq4lg?lang=en', img: 'homes/8Eaton.webp' },
-    { id: 14, address: '28 Hollywood Avenue Toronto (Willowdale East), Unit 809', type: 'Condo', price: 798_000, beds: 3, baths: 2, sqft: "1000-1199", tag: 'Delisted', url: 'https://www.realmaster.cn/s/oqXFtQGS4C?lang=en', img: 'homes/holywood.webp' },
-    { id: 15, address: '159 Wellesley Street E, Toronto (Cabbagetown-South St. James Town), Unit 1509', type: 'Condo', price: 598_800, beds: 2, baths: 1, sqft: "500-599", tag: 'Delisted', url: 'https://www.realmaster.cn/s/mB1d3WAcIf?lang=en', img: 'homes/159Wellesley.webp' },
-    { id: 16, address: '40 Tottenham Road, Toronto (Banbury-Don Mills)', type: 'Detached', price: 1_999_000, beds: 6, baths: 6, sqft: "3500-5000", tag: 'New', url: 'https://www.realmaster.cn/s/te3NyAyLGh?lang=en', img: 'homes/40TottenhamRd.webp' },
+    { id: 2, address: '38 Foxwarren Drive, Toronto (Bayview Village)', type: 'Detached', price: 3_690_000, beds: 7, baths: 7, sqft: '3500-5000', tag: 'New', featured: true, url: 'https://www.realmaster.cn/s/1MejwwjRsz?lang=en', img: 'homes/38FoxwarrenDrive.webp' },
+    { id: 16, address: '40 Tottenham Road, Toronto (Banbury-Don Mills)', type: 'Detached', price: 1_999_000, beds: 6, baths: 6, sqft: '3500-5000', tag: 'New', featured: true, url: 'https://www.realmaster.cn/s/te3NyAyLGh?lang=en', img: 'homes/40TottenhamRd.webp' },
+    { id: 1, address: '3573 Colonial Drive, Mississauga (Erin Mills)', type: 'Detached', price: 1_399_000, beds: 6, baths: 7, sqft: '2500-3000', tag: 'New', featured: true, url: 'https://www.realmaster.cn/s/okhAUZK3vS?lang=en', img: 'homes/3573ColonialDrive.webp' },
+    { id: 9, address: '6 Vonda Avenue, Toronto (Willowdale East)', type: 'Detached', price: 1_490_000, beds: 5, baths: 3, sqft: '2000-2500', tag: 'New', url: 'https://www.realmaster.cn/s/qpRHKtSNvg?lang=en', img: 'homes/vonda.webp' },
+    { id: 7, address: '12 Vonda Avenue, Toronto (Willowdale East)', type: 'Detached', price: 1_490_000, beds: 6, baths: 4, sqft: '2000-2500', tag: 'For Sale', url: 'https://www.realmaster.cn/s/jPdSGCP4Yp?lang=en', img: 'homes/12vondaave.webp' },
+    { id: 5, address: '72 Bowerbank Drive, Toronto (Newtonbrook East)', type: 'Detached', price: 1_279_000, beds: 5, baths: 3, sqft: '1500-2000', tag: 'For Sale', url: 'https://www.realmaster.cn/s/ZBkeSebC0o?lang=en', img: 'homes/bowerbank.webp' },
+    { id: 8, address: '462 Ellerslie Avenue, Toronto (Willowdale West)', type: 'Detached', price: 1_249_000, beds: 3, baths: 1, sqft: '700-1100', tag: 'For Sale', url: 'https://www.realmaster.cn/s/NXojbg7CAA?lang=en', img: 'homes/462ellerslieave.webp' },
+    { id: 6, address: '43 Karen Street, Vaughan (Crestwood-Springfarm-Yorkhill)', type: 'Semi-Detached', price: 1_098_000, beds: 3, baths: 3, sqft: '1500-2000', tag: 'For Sale', url: 'https://www.realmaster.cn/s/bcgyqnEOsw?lang=en', img: 'homes/43Karen.webp' },
+    { id: 3, address: '6 Iron Street, Welland (Lincoln/Crowland)', type: 'Detached', price: 379_900, beds: 3, baths: 1, sqft: '700-1100', tag: 'For Sale', url: 'https://www.realmaster.cn/s/NX15qjS5EN?lang=en', img: 'homes/iron.webp' },
+    { id: 4, address: '3880 Midland Avenue, Toronto (Milliken), Unit 05', type: 'Retail', price: 500_000, sqft: '1080', tag: 'Sold Conditional', url: 'https://www.realmaster.cn/s/uABiSgjTDN?lang=en', img: 'homes/3880midlandave.webp' },
+    { id: 11, address: '10 Centurion Court, Toronto (Bayview Woods-Steeles)', type: 'Detached', price: 1_400_000, beds: 6, baths: 4, sqft: '2000-2500', tag: 'Sold', url: 'https://www.realmaster.cn/s/nbJIAIxhOh?lang=en', img: 'homes/10Centurion.webp' },
+    { id: 10, address: '639 Royal York Road, Toronto (Stonegate-Queensway)', type: 'Detached', price: 1_340_000, beds: 4, baths: 3, sqft: '1500-2000', tag: 'Sold', url: 'https://www.realmaster.com/s/sxrQ4r6Kmk?lang=en', img: 'homes/639Royal.webp' },
+    { id: 13, address: '8 Eaton Park Lane, Toronto (L\'Amoreaux), Unit 3', type: 'Townhouse', price: 940_000, beds: 5, baths: 4, sqft: '1500-2000', tag: 'Sold', url: 'https://www.realmaster.cn/s/eBoKtPq4lg?lang=en', img: 'homes/8Eaton.webp' },
+    { id: 12, address: '400 Alex Gardner Circle, Aurora (Aurora Village), Unit 74', type: 'Townhouse', price: 630_000, beds: 2, baths: 3, sqft: '1200-1399', tag: 'Sold', url: 'https://www.realmaster.cn/s/MXu7A1nDVn?lang=en', img: 'homes/400Alex.webp' },
+    { id: 14, address: '28 Hollywood Avenue, Toronto (Willowdale East), Unit 809', type: 'Condo', price: 798_000, beds: 3, baths: 2, sqft: '1000-1199', tag: 'Delisted', url: 'https://www.realmaster.cn/s/oqXFtQGS4C?lang=en', img: 'homes/holywood.webp' },
+    { id: 15, address: '159 Wellesley Street E, Toronto (Cabbagetown-South St. James Town), Unit 1509', type: 'Condo', price: 598_800, beds: 2, baths: 1, sqft: '500-599', tag: 'Delisted', url: 'https://www.realmaster.cn/s/mB1d3WAcIf?lang=en', img: 'homes/159Wellesley.webp' },
 ];
 
 const rentals = [
-    { id: 1, address: 'Garden Suite 15 Merredin Place, Toronto (Banbury-Don Mills)', type: 'Detached', price: 3_000, beds: 2, baths: 1, sqft: "< 700", tag: 'For Rent', isRental: true, url: 'https://www.realmaster.cn/s/W9MCW2izxs?lang=en', img: 'homes/15MerredinPlace.webp' },
-    { id: 2, address: '60 Shuter Street, Toronto (Church-Yonge Corridor), Unit 309', type: 'Condo', price: 2_625, beds: 2, baths: 2, sqft: "700-799", tag: 'For Rent', isRental: true, url: 'https://www.realmaster.cn/s/dck4xKw28V?lang=en', img: 'homes/60ShuterStreet.webp' },
-    { id: 3, address: '38 Foxwarren Drive, Toronto (Bayview Village)', type: 'Detached', price: 8_000, beds: 7, baths: 7, sqft: "3500-5000", tag: 'Leased', isRental: true, url: 'https://www.realmaster.cn/s/Tl2DrDtDGc?lang=en', img: 'homes/38FoxwarrenDr.webp' },
+    { id: 1, address: 'Garden Suite 15 Merredin Place, Toronto (Banbury-Don Mills)', type: 'Detached', price: 3_000, beds: 2, baths: 1, sqft: '< 700', tag: 'For Rent', isRental: true, url: 'https://www.realmaster.cn/s/W9MCW2izxs?lang=en', img: 'homes/15MerredinPlace.webp' },
+    { id: 2, address: '60 Shuter Street, Toronto (Church-Yonge Corridor), Unit 309', type: 'Condo', price: 2_625, beds: 2, baths: 2, sqft: '700-799', tag: 'For Rent', isRental: true, url: 'https://www.realmaster.cn/s/dck4xKw28V?lang=en', img: 'homes/60ShuterStreet.webp' },
+    { id: 3, address: '38 Foxwarren Drive, Toronto (Bayview Village)', type: 'Detached', price: 8_000, beds: 7, baths: 7, sqft: '3500-5000', tag: 'Leased', isRental: true, url: 'https://www.realmaster.cn/s/Tl2DrDtDGc?lang=en', img: 'homes/38FoxwarrenDr.webp' },
 ];
 
-function formatPrice(price, isRental) {
-    if (isRental) return '$' + price.toLocaleString() + '/mo';
-    if (price >= 1_000_000) return '$' + (price / 1_000_000).toFixed(price % 1_000_000 === 0 ? 0 : 2) + 'M';
-    return '$' + (price / 1000).toFixed(0) + 'K';
+function isAvailableListing(l) {
+    return l.tag === 'New' || l.tag === 'For Sale' || l.tag === 'For Rent';
+}
+
+function parseAddress(raw) {
+    const hoodMatch = raw.match(/\(([^)]+)\)/);
+    const neighbourhood = hoodMatch ? hoodMatch[1].trim() : '';
+    const cleaned = raw.replace(/\s*\([^)]+\)/, '');
+    const parts = cleaned.split(',').map(s => s.trim()).filter(Boolean);
+    const street = parts.length > 2 ? `${parts[0]}, ${parts.slice(2).join(', ')}` : (parts[0] || raw);
+    const city = parts[1] || 'GTA';
+    const area = neighbourhood ? `${neighbourhood} · ${city}` : city;
+    return { street, area };
+}
+
+function formatPrice(price, isRental, lang) {
+    const t = translations[lang] || translations.en;
+    if (isRental) return '$' + price.toLocaleString() + t['unit-mo'];
+    return '$' + price.toLocaleString();
+}
+
+function getTagClass(tag) {
+    if (tag === 'New') return 'tag-new';
+    if (tag === 'For Sale') return 'tag-sale';
+    if (tag === 'For Rent') return 'tag-rent';
+    return 'tag-sold';
 }
 
 function listingCard(l) {
-    const colors = { 'For Sale': 'var(--color-primary)', 'New': 'var(--color-success)', 'For Rent': 'var(--color-blue)' };
+    const t = translations[currentLang] || translations.en;
+    const { street, area } = parseAddress(l.address);
+    const active = isAvailableListing(l);
+    const tagText = t['tag-' + l.tag] || l.tag;
+    const typeText = t['type-' + l.type] || l.type;
+    const hasBeds = typeof l.beds === 'number' && typeof l.baths === 'number';
+
+    const bedIcon  = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"/></svg>';
+    const bathIcon = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5H4"/></svg>';
+    const areaIcon = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>';
+
+    const metaHtml = hasBeds
+        ? `<span>${bedIcon}${l.beds} ${t['unit-bd']}</span>
+           <span>${bathIcon}${l.baths} ${t['unit-ba']}</span>
+           <span>${areaIcon}${l.sqft} ${t['unit-sqft']}</span>`
+        : `<span>${areaIcon}${typeText}</span>
+           <span>${l.sqft} ${t['unit-sqft']}</span>`;
+
     return `
-        <a class="listing-card" href="${l.url}" target="_blank" rel="noopener noreferrer" style="text-decoration:none;display:block;cursor:pointer;">
-        <div class="listing-img-placeholder">
-            <span class="listing-tag" style="background:${colors[l.tag] || 'var(--color-primary)'}66;color:${colors[l.tag] || 'var(--color-primary)'}">${l.tag}</span>
-            <img
-            class="listing-photo"
-            src="${ASSET_BASE}${l.img}"
-            alt="${l.address}"
-            width="400" height="180"
-            loading="lazy"
-            decoding="async"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
-            />
-            <div class="listing-img-icon" style="display:none;">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" opacity=".3"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <a class="listing-card${active ? '' : ' is-inactive'}" href="${l.url}" target="_blank" rel="noopener noreferrer">
+            <div class="listing-img-placeholder">
+                <span class="listing-tag ${getTagClass(l.tag)}">${tagText}</span>
+                <span class="listing-type-pill">${typeText}</span>
+                <img
+                    class="listing-photo"
+                    src="${ASSET_BASE}${l.img}"
+                    alt="${l.address}"
+                    width="480" height="300"
+                    loading="lazy"
+                    decoding="async"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+                />
+                <div class="listing-img-icon" style="display:none;">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" opacity=".35"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </div>
             </div>
-        </div>
-        <div class="listing-body">
-            <div class="listing-price">${formatPrice(l.price, l.isRental)}</div>
-            <p class="listing-address">${l.address}</p>
-            <p class="listing-type">${l.type}</p>
-            <div class="listing-meta">
-            <span>${l.beds} bd</span>
-            <span>${l.baths} ba</span>
-            <span>${l.sqft.toLocaleString()} sqft</span>
+            <div class="listing-body">
+                <div class="listing-area">${area}</div>
+                <div class="listing-price">${formatPrice(l.price, l.isRental, currentLang)}</div>
+                <p class="listing-address">${street}</p>
+                <div class="listing-meta">${metaHtml}</div>
             </div>
-        </div>
-        </a>
-    `;
+        </a>`;
 }
 
 function renderListings(data, gridId) {
@@ -635,42 +824,152 @@ function renderListings(data, gridId) {
     grid.innerHTML = data.map(listingCard).join('');
 }
 
-// Buying page filters
-function applyFilters() {
-    const search = document.getElementById('search-listings').value.toLowerCase();
-    const type = document.getElementById('filter-type').value;
-    const priceMax = parseInt(document.getElementById('filter-price').value) * 1000 || Infinity;
-    const filtered = listings.filter(l =>
-        (!search || l.address.toLowerCase().includes(search)) &&
-        (!type || l.type === type) &&
-        (l.price <= priceMax)
-    );
-    renderListings(filtered, 'listings-grid');
-    document.getElementById('empty-listings').classList.toggle('hidden', filtered.length > 0);
+function renderFeaturedListings() {
+    const featured = listings.filter(l => l.featured).slice(0, 3);
+    renderListings(featured, 'featured-listings-grid');
 }
+
+// ── 5. Listings Filtering & Status Pills ──────────────────────────────────
+let activeStatusFilter = 'available'; // 'available' | 'sold' | 'all'
+
+function updateStatusPillLabels() {
+    const t = translations[currentLang] || translations.en;
+    const availCount = listings.filter(isAvailableListing).length;
+    const soldCount  = listings.length - availCount;
+
+    const pAvail = document.querySelector('.status-pill[data-status="available"]');
+    const pSold  = document.querySelector('.status-pill[data-status="sold"]');
+    const pAll   = document.querySelector('.status-pill[data-status="all"]');
+
+    if (pAvail) pAvail.textContent = `${t['pill-available']} (${availCount})`;
+    if (pSold)  pSold.textContent  = `${t['pill-sold']} (${soldCount})`;
+    if (pAll)   pAll.textContent   = `${t['pill-all']} (${listings.length})`;
+}
+
+function applyFilters() {
+    const searchEl = document.getElementById('search-listings');
+    const typeEl   = document.getElementById('filter-type');
+    const priceEl  = document.getElementById('filter-price');
+
+    const search   = searchEl ? searchEl.value.trim().toLowerCase() : '';
+    const type     = typeEl ? typeEl.value : '';
+    const priceMax = (priceEl && priceEl.value) ? parseInt(priceEl.value, 10) * 1000 : Infinity;
+
+    const filtered = listings.filter(l => {
+        const matchesStatus =
+            activeStatusFilter === 'all' ? true :
+            activeStatusFilter === 'available' ? isAvailableListing(l) :
+            !isAvailableListing(l);
+        const matchesSearch = !search || l.address.toLowerCase().includes(search);
+        const matchesType   = !type || l.type === type;
+        const matchesPrice  = l.price <= priceMax;
+        return matchesStatus && matchesSearch && matchesType && matchesPrice;
+    });
+
+    renderListings(filtered, 'listings-grid');
+
+    const emptyEl = document.getElementById('empty-listings');
+    if (emptyEl) emptyEl.classList.toggle('hidden', filtered.length > 0);
+
+    const readout = document.getElementById('listings-count');
+    if (readout) {
+        const t = translations[currentLang] || translations.en;
+        readout.textContent = `${t['showing-prefix']} ${filtered.length} ${t['showing-suffix']}`;
+    }
+}
+
+document.querySelectorAll('.status-pill[data-status]').forEach(pill => {
+    pill.addEventListener('click', () => {
+        activeStatusFilter = pill.dataset.status;
+        document.querySelectorAll('.status-pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        applyFilters();
+    });
+});
 
 ['search-listings', 'filter-type', 'filter-price'].forEach(id => {
     const el = document.getElementById(id);
     if (el) el.addEventListener('input', applyFilters);
 });
 
-// ── Stat Counter Animation ────────────────────────────────────
+// Hero Search Bar Handler (works in both SPA and Multi-Page)
+const heroSearchForm = document.getElementById('hero-search-form');
+if (heroSearchForm) {
+    heroSearchForm.addEventListener('submit', e => {
+        const q     = (document.getElementById('hero-search-q')?.value || '').trim();
+        const type  = document.getElementById('hero-search-type')?.value || '';
+        const price = document.getElementById('hero-search-price')?.value || '';
+
+        const buyingPage = document.getElementById('page-buying');
+        if (buyingPage) {
+            e.preventDefault();
+            const sInput = document.getElementById('search-listings');
+            const tInput = document.getElementById('filter-type');
+            const pInput = document.getElementById('filter-price');
+            if (sInput) sInput.value = q;
+            if (tInput) tInput.value = type;
+            if (pInput) pInput.value = price;
+
+            // If user searched a specific street that is sold, switch to 'all' automatically so it appears
+            if (q) {
+                const availMatches = listings.filter(l => isAvailableListing(l) && l.address.toLowerCase().includes(q.toLowerCase()));
+                activeStatusFilter = availMatches.length > 0 ? 'available' : 'all';
+                document.querySelectorAll('.status-pill').forEach(p => {
+                    p.classList.toggle('active', p.dataset.status === activeStatusFilter);
+                });
+            }
+
+            applyFilters();
+            showPage('buying');
+        }
+        // In multi-page mode (pages/home.html), the form's action="listings.html" submits GET params naturally!
+    });
+}
+
+// Hydrate URL query parameters on pages/listings.html
+(function initUrlQueryFilters() {
+    if (!document.getElementById('listings-grid')) return;
+    const params = new URLSearchParams(window.location.search);
+    const q     = params.get('q');
+    const type  = params.get('type');
+    const price = params.get('price');
+    if (!q && !type && !price) return;
+
+    const sInput = document.getElementById('search-listings');
+    const tInput = document.getElementById('filter-type');
+    const pInput = document.getElementById('filter-price');
+    if (sInput && q) sInput.value = q;
+    if (tInput && type) tInput.value = type;
+    if (pInput && price) pInput.value = price;
+
+    if (q) {
+        const availMatches = listings.filter(l => isAvailableListing(l) && l.address.toLowerCase().includes(q.toLowerCase()));
+        if (availMatches.length === 0) {
+            activeStatusFilter = 'all';
+            document.querySelectorAll('.status-pill').forEach(p => {
+                p.classList.toggle('active', p.dataset.status === 'all');
+            });
+        }
+    }
+})();
+
+// ── 6. Stat Counter Animation ─────────────────────────────────────────────
 function animateCounters() {
     document.querySelectorAll('.stat-number[data-target]').forEach(el => {
-        const target = parseInt(el.dataset.target);
-        const duration = 1400;
+        const target = parseInt(el.dataset.target, 10);
+        const duration = 1200;
         const start = performance.now();
         function step(now) {
-        const progress = Math.min((now - start) / duration, 1);
-        const ease = 1 - Math.pow(1 - progress, 3);
-        el.textContent = Math.round(ease * target);
-        if (progress < 1) requestAnimationFrame(step);
+            const progress = Math.min((now - start) / duration, 1);
+            const ease = 1 - Math.pow(1 - progress, 3);
+            el.textContent = Math.round(ease * target);
+            if (progress < 1) requestAnimationFrame(step);
         }
         requestAnimationFrame(step);
     });
 }
 
-// ── Form Handlers ─────────────────────────────────────────────
+// ── 7. Form Submission Handlers ───────────────────────────────────────────
 function setupForm(formId, successId) {
     const form = document.getElementById(formId);
     const success = document.getElementById(successId);
@@ -685,235 +984,67 @@ setupForm('eval-form', 'eval-success');
 setupForm('application-form', 'app-success');
 setupForm('contact-form', 'contact-success');
 
-// ── Init ───────────────────────────────────────────────────────
-renderEmployeesLang('en');
-renderListings(listings, 'listings-grid');
-renderListings(rentals, 'rentals-grid');
-animateCounters();
+// ── 8. Bilingual Translation Engine (EN ↔ 中文) ───────────────────────────
+function applyTranslations(lang) {
+    currentLang = lang;
+    const t = translations[lang] || translations.en;
 
-// Re-run counter animation when Home tab is shown
-document.querySelectorAll('.nav-tab[data-tab="home"]').forEach(btn => {
-    btn.addEventListener('click', () => setTimeout(animateCounters, 100));
+    // Generic [data-i18n] text & [data-i18n-ph] placeholder bindings
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) el.textContent = t[key];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const key = el.getAttribute('data-i18n-html');
+        if (t[key] !== undefined) el.innerHTML = t[key];
+    });
+    document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+        const key = el.getAttribute('data-i18n-ph');
+        if (t[key] !== undefined) el.placeholder = t[key];
+    });
+
+    // Preserve chevron inside Selling dropdown trigger
+    document.querySelectorAll('.dropdown-trigger').forEach(trigger => {
+        const chevron = trigger.querySelector('.chevron');
+        trigger.textContent = t['nav-selling'] + ' ';
+        if (chevron) trigger.appendChild(chevron);
+    });
+
+    // Hero composite title
+    const heroTitle = document.querySelector('.hero-title');
+    if (heroTitle) {
+        heroTitle.innerHTML = `${t['hero-title-main']}<em>${t['hero-title-em']}</em>${t['hero-title-end'] || ''}`;
+    }
+
+    // Translate property type <select> options across hero, listings, and evaluation
+    document.querySelectorAll('select option[data-type-opt]').forEach(opt => {
+        const raw = opt.getAttribute('data-type-opt');
+        if (t['type-' + raw]) opt.textContent = t['type-' + raw];
+    });
+
+    // Re-render dynamic grids & pill labels
+    renderEmployeesLang(lang);
+    renderFeaturedListings();
+    updateStatusPillLabels();
+    applyFilters();
+    renderListings(rentals, 'rentals-grid');
+
+    // Translate button text
+    document.querySelectorAll('#translate-btn, .translate-btn').forEach(btn => {
+        btn.textContent = t['translate-btn'];
+    });
+
+    document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-Hans' : 'en');
+}
+
+document.querySelectorAll('#translate-btn, .translate-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        currentLang = currentLang === 'en' ? 'zh' : 'en';
+        try { localStorage.setItem('taihome-lang', currentLang); } catch (e) {}
+        applyTranslations(currentLang);
+    });
 });
 
-// Map translation keys to DOM elements
-function applyTranslations(lang) {
-    const t = translations[lang];
-    const set = (sel, key, attr) => {
-        const el = document.querySelector(sel);
-        if (!el || !t[key]) return;
-        if (attr === 'placeholder') el.placeholder = t[key];
-        else if (attr === 'innerHTML') el.innerHTML = t[key];
-        else el.textContent = t[key];
-    };
-    const setAll = (sel, key) => {
-        document.querySelectorAll(sel).forEach(el => { if (t[key]) el.textContent = t[key]; });
-    };
-
-    // Top bar
-    set('#bar h1', 'bar-title');
-
-    // Nav tabs
-    set('.nav-tab[data-tab="home"]', 'nav-home');
-    set('.nav-tab[data-tab="employees"]', 'nav-employees');
-    set('.dropdown-trigger', 'nav-selling');
-    set('.nav-tab[data-tab="buying"]', 'nav-buying');
-    set('.nav-tab[data-tab="renting"]', 'nav-renting');
-    set('.nav-tab[data-tab="joinFirm"]', 'nav-joinFirm');
-    set('.nav-tab[data-tab="contact"]', 'nav-contact');
-    // Keep chevron in selling button
-    const sellingBtn = document.querySelector('.dropdown-trigger');
-    if (sellingBtn) {
-        const chevron = sellingBtn.querySelector('.chevron');
-        sellingBtn.textContent = t['nav-selling'] || '';
-        if (chevron) sellingBtn.appendChild(chevron);
-    }
-    const dropLinks = document.querySelectorAll('.dropdown-list li a');
-    if (dropLinks[0]) {
-        dropLinks[0].textContent = t['nav-sell-home'] || '';
-        dropLinks[0].setAttribute('data-tab', 'selling');
-        dropLinks[0].setAttribute('data-section', 'sell');
-    }
-    if (dropLinks[1]) {
-        dropLinks[1].textContent = t['nav-eval'] || '';
-        dropLinks[1].setAttribute('data-tab', 'selling');
-        dropLinks[1].setAttribute('data-section', 'eval');
-    }
-
-    // Hero
-    set('.hero-eyebrow', 'hero-eyebrow');
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) heroTitle.innerHTML = (t['hero-title-main'] || '') + '<em>' + (t['hero-title-em'] || '') + '</em>';
-    set('.hero-subtitle', 'hero-subtitle');
-    const heroBtns = document.querySelectorAll('.hero-actions .btn');
-    if (heroBtns[0]) heroBtns[0].textContent = t['hero-btn-browse'] || '';
-    if (heroBtns[1]) heroBtns[1].textContent = t['hero-btn-agent'] || '';
-
-    // Stats
-    const statLabels = document.querySelectorAll('.stat-label');
-    if (statLabels[0]) statLabels[0].textContent = t['stat-sold'] || '';
-    if (statLabels[1]) statLabels[1].textContent = t['stat-exp'] || '';
-    if (statLabels[2]) statLabels[2].textContent = t['stat-sat'] || '';
-
-    // Services
-    set('.section-title', 'section-what');
-    const svcCards = document.querySelectorAll('.service-card');
-    const svcKeys = [['svc-buying-title','svc-buying-desc'],['svc-selling-title','svc-selling-desc'],['svc-renting-title','svc-renting-desc'],['svc-join-title','svc-join-desc']];
-    svcCards.forEach((card, i) => {
-        if (!svcKeys[i]) return;
-        const h3 = card.querySelector('h3'); const p = card.querySelector('p');
-        if (h3) h3.textContent = t[svcKeys[i][0]] || '';
-        if (p)  p.textContent  = t[svcKeys[i][1]] || '';
-    });
-
-    // Employees page header
-    set('#page-employees .page-title', 'emp-page-title');
-    set('#page-employees .page-subtitle', 'emp-page-subtitle');
-
-    // Employee cards (re-render)
-    renderEmployeesLang(lang);
-
-    // Employee detail buttons
-    const callBtn = document.getElementById('profile-phone');
-    const emailBtn = document.getElementById('profile-email');
-    if (callBtn) { const svg = callBtn.querySelector('svg'); callBtn.textContent = t['emp-call'] || ''; if (svg) callBtn.insertBefore(svg, callBtn.firstChild); }
-    if (emailBtn) { const svg = emailBtn.querySelector('svg'); emailBtn.textContent = t['emp-email'] || ''; if (svg) emailBtn.insertBefore(svg, emailBtn.firstChild); }
-    set('.profile-contact h3', 'emp-contact-title');
-    set('#back-btn', 'emp-back');
-    const backSvg = document.querySelector('#back-btn svg');
-    const backBtn = document.getElementById('back-btn');
-    if (backBtn && backSvg) { backBtn.textContent = t['emp-back'] || ''; backBtn.insertBefore(backSvg, backBtn.firstChild); }
-
-    // Selling page
-    set('#page-selling .page-title', 'sell-page-title');
-    set('#page-selling .page-subtitle', 'sell-page-subtitle');
-    const sellTabs = document.querySelectorAll('.selling-tab');
-    if (sellTabs[0]) sellTabs[0].textContent = t['sell-tab-sell'] || '';
-    if (sellTabs[1]) sellTabs[1].textContent = t['sell-tab-eval'] || '';
-    set('#sell-section .selling-intro h2', 'sell-why-title');
-    set('#sell-section .selling-intro p', 'sell-why-desc');
-    const steps = document.querySelectorAll('.step-item');
-    const stepKeys = [['step1-title','step1-desc'],['step2-title','step2-desc'],['step3-title','step3-desc'],['step4-title','step4-desc']];
-    steps.forEach((s, i) => {
-        if (!stepKeys[i]) return;
-        const h3 = s.querySelector('h3'); const p = s.querySelector('p');
-        if (h3) h3.textContent = t[stepKeys[i][0]] || '';
-        if (p)  p.textContent  = t[stepKeys[i][1]] || '';
-    });
-    set('.cta-box h3', 'cta-sell-title');
-    set('.cta-box p', 'cta-sell-desc');
-    const ctaBtn = document.querySelector('.cta-box .btn');
-    if (ctaBtn) ctaBtn.textContent = t['cta-sell-btn'] || '';
-    set('#eval-section .selling-intro h2', 'eval-title');
-    set('#eval-section .selling-intro p', 'eval-desc');
-    set('label[for="eval-address"]', 'eval-address-label');
-    set('#eval-address', 'eval-address-ph', 'placeholder');
-    set('label[for="eval-type"]', 'eval-type-label');
-    set('label[for="eval-beds"]', 'eval-beds-label');
-    set('label[for="eval-name"]', 'eval-name-label');
-    set('#eval-name', 'eval-name-ph', 'placeholder');
-    set('label[for="eval-phone"]', 'eval-phone-label');
-    set('#eval-phone', 'eval-phone-ph', 'placeholder');
-    set('label[for="eval-email"]', 'eval-email-label');
-    set('#eval-email', 'eval-email-ph', 'placeholder');
-    set('label[for="eval-notes"]', 'eval-notes-label');
-    set('#eval-notes', 'eval-notes-ph', 'placeholder');
-    set('#eval-form button[type="submit"]', 'eval-submit');
-    set('#eval-success h3', 'eval-success-title');
-    set('#eval-success p', 'eval-success-desc');
-
-    // Buying page
-    set('#page-buying .page-title', 'buy-page-title');
-    set('#page-buying .page-subtitle', 'buy-page-subtitle');
-    set('#search-listings', 'buy-search-ph', 'placeholder');
-    const filterType = document.querySelector('#filter-type option:first-child');
-    if (filterType) filterType.textContent = t['buy-filter-type'] || '';
-    const filterPrice = document.querySelector('#filter-price option:first-child');
-    if (filterPrice) filterPrice.textContent = t['buy-filter-price'] || '';
-    set('#empty-listings p', 'buy-empty');
-
-    // Renting page
-    set('#page-renting .page-title', 'rent-page-title');
-    set('#page-renting .page-subtitle', 'rent-page-subtitle');
-
-    // Join page
-    set('#page-joinFirm .page-title', 'join-page-title');
-    set('#page-joinFirm .page-subtitle', 'join-page-subtitle');
-    set('.join-intro h2', 'join-why-title');
-    const benefs = document.querySelectorAll('.join-benefits li');
-    const bKeys = ['join-b1','join-b2','join-b3','join-b4','join-b5','join-b6','join-b7', 'join-b8'];
-    benefs.forEach((li, i) => {
-        if (!bKeys[i]) return;
-        const svg = li.querySelector('svg');
-        li.textContent = t[bKeys[i]];
-        if (svg) li.insertBefore(svg, li.firstChild);
-    });
-    set('.join-intro h2', 'join-why-title');
-    set('.application-section h2', 'join-form-title');
-    set('.please-read', 'join-please-read');
-    set('label[for="app-first"]', 'app-first-label');
-    set('#app-first', 'app-first-ph', 'placeholder');
-    set('label[for="app-last"]', 'app-last-label');
-    set('#app-last', 'app-last-ph', 'placeholder');
-    set('label[for="app-email"]', 'app-email-label');
-    set('#app-email', 'app-email-ph', 'placeholder');
-    set('label[for="app-phone"]', 'app-phone-label');
-    set('#app-phone', 'app-phone-ph', 'placeholder');
-    set('label[for="app-reco"]', 'app-reco-label');
-    set('#app-reco', 'app-reco-ph', 'placeholder');
-    set('label[for="app-exp"]', 'app-exp-label');
-    set('label[for="app-langs"]', 'app-langs-label');
-    set('#app-langs', 'app-langs-ph', 'placeholder');
-    set('label[for="app-why"]', 'app-why-label');
-    set('#app-why', 'app-why-ph', 'placeholder');
-    set('#application-form button[type="submit"]', 'app-submit');
-    set('#app-success h3', 'app-success-title');
-    set('#app-success p', 'app-success-desc');
-
-    // Contact page
-    set('#page-contact .page-title', 'contact-page-title');
-    set('#page-contact .page-subtitle', 'contact-page-subtitle');
-    const cDetails = document.querySelectorAll('.contact-detail');
-    const cKeys = ['contact-phone-label','contact-email-label','contact-office-label','contact-hours-label'];
-    const cValKeys = [null, null, 'contact-office-val','contact-hours-val'];
-    cDetails.forEach((d, i) => {
-        const h4 = d.querySelector('h4'); const p = d.querySelector('p');
-        if (h4 && t[cKeys[i]]) h4.textContent = t[cKeys[i]];
-        if (p && cValKeys[i] && t[cValKeys[i]]) p.innerHTML = t[cValKeys[i]];
-    });
-    set('label[for="c-name"]', 'c-name-label');
-    set('#c-name', 'c-name-ph', 'placeholder');
-    set('label[for="c-phone"]', 'c-phone-label');
-    set('#c-phone', 'c-phone-ph', 'placeholder');
-    set('label[for="c-email"]', 'c-email-label');
-    set('#c-email', 'c-email-ph', 'placeholder');
-    set('label[for="c-subject"]', 'c-subject-label');
-    const cSubjectPh = document.querySelector('#c-subject option:first-child');
-    if (cSubjectPh) cSubjectPh.textContent = t['c-subject-ph'] || '';
-    set('label[for="c-message"]', 'c-msg-label');
-    set('#c-message', 'c-msg-ph', 'placeholder');
-    set('#contact-form button[type="submit"]', 'c-submit');
-    set('#contact-success h3', 'contact-success-title');
-    set('#contact-success p', 'contact-success-desc');
-
-    // Translate button label
-    set('#translate-btn', 'translate-btn');
-
-    // Footer
-    const footerTagline = document.querySelector('.footer-tagline-span');
-    const footerRights = document.querySelector('.footer-rights-span');
-    if (footerTagline && t['footer-tagline']) footerTagline.textContent = t['footer-tagline'];
-    if (footerRights && t['footer-rights']) footerRights.textContent = t['footer-rights'];
-}
-
-// ── Translate Button ──────────────────────────────────────────
-let currentLang = 'en';
-const translateBtn = document.getElementById('translate-btn');
-if (translateBtn) {
-    translateBtn.addEventListener('click', () => {
-        currentLang = currentLang === 'en' ? 'zh' : 'en';
-        applyTranslations(currentLang);
-        // Update lang attribute for font rendering
-        document.documentElement.setAttribute('lang', currentLang === 'zh' ? 'zh-Hans' : 'en');
-    });
-}
+// ── 9. Initial Render ─────────────────────────────────────────────────────
+applyTranslations(currentLang);
+animateCounters();

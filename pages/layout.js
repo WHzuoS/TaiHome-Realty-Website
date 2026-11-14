@@ -1,16 +1,4 @@
-/* TaiHome Realty — multi-page layout loader (pages/*.html)
- *
- * Each page declares three slots:
- *   <div data-include="topbar"></div>
- *   <div data-include="nav"></div>
- *   <div data-include="footer"></div>
- *
- * This script fetches the shared partials (single source of truth in
- * ../partials/), highlights the active nav link from <body data-page>,
- * stamps the footer year, then loads ../index.js AFTER the chrome exists
- * so its theme toggle / translate / render bindings attach correctly.
- * Serve over http(s) — fetch() of partials is blocked on file://.
- */
+/* TaiHome Realty — multi-page layout loader (pages/*.html) */
 (function () {
     'use strict';
 
@@ -52,7 +40,6 @@
         document.querySelectorAll('[data-nav]').forEach(function (a) {
             if (a.getAttribute('data-nav') === page) a.classList.add('active');
         });
-        // The Selling dropdown trigger stays highlighted on its child pages.
         if (page === 'evaluation') {
             document.querySelectorAll('[data-nav="selling"].dropdown-trigger').forEach(function (a) {
                 a.classList.add('active');
